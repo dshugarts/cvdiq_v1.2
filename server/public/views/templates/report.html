@@ -1,0 +1,166 @@
+<div ng-include="'views/partials/nav.html'"></div>
+<div class="container">
+    <h2>My Detailed Report</h2>
+    <section class="col-md-12" ng-repeat="data in vm.dataArray">
+        <div class="col-md-7">
+                <h4><a ng-click="vm.getHeartHealthData(vm.id)">My Heart Health Score:</a></h4>
+        </div>
+        <div class="col-md-2">
+            <h4><strong>{{data.cvd_score}}</strong></h4>
+        </div>
+        <div class="col-md-3">
+                <h4><strong>{{vm.cvdRisk}}</strong></h4>
+        </div>
+        <div class="col-md-12">
+                <h4>{{vm.hhsReport}}</h4>
+        </div>
+        <div class="col-md-7">
+                <h4><strong>Age:</strong></h4>
+            </div>
+            <div class="col-md-2">
+                <h4><strong>{{data.age_value}}</strong></h4>
+            </div>
+            <div class="col-md-3">
+                <h4><strong>{{vm.ageRisk}}</strong></h4>
+                </div>
+            <div class="col-md-12">
+                <h4>{{vm.ageReport}}</h4>
+            </div>
+        <div class="col-md-7">
+                <h4><a ng-click="vm.getBpData(vm.id)">Blood Pressure:</a></h4>
+        </div>
+                <div class="col-md-2">
+                    <h4><strong>{{data.systolic_value}}/{{data.diastolic_value}}</strong></h4>
+                </div>
+                <div class="col-md-3">
+                        <h4><strong>{{vm.bpRisk}}</strong></h4>
+                </div>
+                <div class="col-md-12">
+                    <h4>{{vm.bpReport}}</h4>
+                </div>
+        <div class="col-md-7">
+                <h4><a ng-click="vm.getLdlData(vm.id)">LDL:</a></h4>
+        </div>
+        <div class="col-md-2">
+                <h4><strong>{{data.ldl_value}}</strong></h4>
+        </div>
+        <div class="col-md-3">
+                <h4><strong>{{vm.ldlRisk}}</strong></h4>
+        </div>
+        <div class="col-md-12">
+                <h4>{{vm.ldlReport}}</h4>
+        </div>
+        <div class="col-md-7">
+                <h4><a ng-click="vm.getHdlData(vm.id)">HDL:</a></h4>
+        </div>
+        <div class="col-md-2">
+                <h4><strong>{{data.hdl_value}}</strong></h4>
+        </div>
+        <div class="col-md-3">
+                <h4><strong>{{vm.hdlRisk}}</strong></h4>
+        </div>
+        <div class="col-md-12">
+                <h4>{{vm.hdlReport}}</h4>
+        </div>
+        <div class="col-md-7">
+                <h4><a ng-click="vm.getGluData(vm.id)">Glucose:</a></h4>
+        </div>
+        <div class="col-md-2">
+                <h4><strong>{{data.glu_value}}</strong></h4>
+        </div>
+        <div class="col-md-3">
+                <h4><strong>{{vm.gluRisk}}</strong></h4>
+        </div>
+        <div class="col-md-12">
+                <h4>{{vm.gluReport}}</h4>
+        </div>
+        <div class="col-md-7">
+                <h4><a ng-click="vm.getWaistData(vm.id)">Waist:</a></h4>
+        </div>
+        <div class="col-md-2">
+                <h4><strong>{{data.waist_value}}</strong></h4>
+        </div>
+        <div class="col-md-3">
+                <h4><strong>{{vm.waistRisk}}</strong></h4>
+        </div>
+        <div class="col-md-12">
+                <h4>{{vm.waistReport}}</h4>
+        </div>
+        <div class="col-md-7">
+                <h4><strong>Family History of CVD:</strong></h4>
+        </div>
+        <div class="col-md-2">
+                <h4><strong>{{vm.historyDisplay}}</strong></h4>
+        </div>
+        <div class="col-md-3">
+                <h4><strong>{{vm.historyRisk}}</strong></h4>
+        </div>
+        <div class="col-md-12">
+                <h4>{{vm.historyReport}}</h4>
+        </div>
+        <div class="col-md-7">
+                <h4><a ng-click="vm.getActivityData(vm.id)">Physical Activity:</a></h4>
+        </div>
+        <div class="col-md-2">
+                <h4><strong>{{data.physical_activity_value}}</strong></h4>
+        </div>
+        <div class="col-md-3">
+                <h4><strong>{{vm.activityRisk}}</strong></h4>
+        </div>
+        <div class="col-md-12">
+                <h4>{{vm.activityReport}}</h4>
+        </div>
+        <div class="col-md-7">
+                <h4><strong>Nicotine Use:</strong></h4>
+        </div>
+        <div class="col-md-2">
+                <h4><strong>{{vm.nicotineDisplay}}</strong></h4>
+        </div>
+        <div class="col-md-3">
+                <h4><strong>{{vm.nicotineRisk}}</strong></h4>
+        </div>
+        <div class="col-md-12">
+                <h4>{{vm.nicotineReport}}</h4>
+        </div>
+        <div class="col-md-7">
+                <h4><a ng-click="vm.getSleepData(vm.id)">Sleep:</a></h4>
+
+        </div>
+        <div class="col-md-2">
+                <h4><strong>{{data.sleep_value}}</strong></h4>
+        </div>
+        <div class="col-md-3">
+                <h4><strong>{{vm.sleepRisk}}</strong></h4>
+        </div>
+        <div class="col-md-12">
+                <h4>{{vm.sleepReport}}</h4>
+        </div>
+        <div class="col-md-7">
+                <h4><a ng-click="vm.getTrgData(vm.id)">Triglycerides:</a></h4>
+        </div>
+        <div class="col-md-2">
+                <h4><strong>{{data.trg_value}}</strong></h4>
+        </div>
+        <div class="col-md-3">
+                <h4><strong>{{vm.trgRisk}}</strong></h4>
+        </div>
+        <div class="col-md-12">
+                <h4>{{vm.trgReport}}</h4>
+        </div>
+        <div class="col-md-7">
+                <h4><a ng-click="vm.getWeightData(vm.id)">Weight:</a></h4>
+                <h4><a ng-click="vm.getbmiData(vm.id)">BMI:</a></h4>
+        </div>
+        <div class="col-md-2">
+                <h4><strong>{{data.weight_value}}</strong></h4>
+                <h4><strong>{{vm.mybmi}}</strong></h4>
+        </div>
+        <div class="col-md-3">
+                <h4><strong>N/A</strong></h4>
+                <h4><strong>{{vm.bmiRisk}}</strong></h4>
+                </div>
+        <div class="col-md-12">
+                <h4>{{vm.bmiReport}}</h4>
+        </div>
+    </section>
+</div>

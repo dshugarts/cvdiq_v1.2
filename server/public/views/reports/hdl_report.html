@@ -1,0 +1,37 @@
+<div class="ng-cloak" ng-include="'views/partials/nav.html'"></div>
+<div class="container">
+        <h2>My HDL Report</h2>
+    </br>
+    </br>
+        <table class="table">
+                <thead>
+                  <tr>
+                    <th>Metric</th>
+                    <th>Value</th>
+                    <th>Risk Level</th>
+                    <th>Chart</th>
+                  </tr>
+                </thead>
+                <tbody ng-repeat="data in vm.dataArray">
+                    <tr class={{vm.hdlClass}}>
+                        <td><strong>HDL:</strong></td>
+                        <td>{{data.hdl_value}}</td>
+                        <td>{{vm.hdlRisk}}</td>
+                        <td><button ng-click="vm.getHdlData(vm.id)" class="btn btn-primary">Chart</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="container">
+        {{vm.hdlReport}}
+    </div>
+    </br>
+    </br>
+    <div class="container">
+            
+    </div>
+    </br>
+    </br>
+    <div class="container">
+            <button class="btn btn-primary" ng-click="vm.reportPage()">Return to Report</button>
+        </div>

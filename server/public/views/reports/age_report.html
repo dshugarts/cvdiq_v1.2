@@ -1,0 +1,35 @@
+<div class="ng-cloak" ng-include="'views/partials/nav.html'"></div>
+<div class="container">
+        <h2>My Age Report</h2>
+    </br>
+    </br>
+        <table class="table">
+                <thead>
+                  <tr>
+                    <th>Metric</th>
+                    <th>Value</th>
+                    <th>Risk Level</th>
+                  </tr>
+                </thead>
+                <tbody ng-repeat="data in vm.dataArray">
+                    <tr class={{vm.ageClass}}>
+                        <td><strong>Age:</strong></td>
+                        <td>{{data.age_value}}</td>
+                        <td>{{vm.ageRisk}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="container">
+        {{vm.ageReport}}
+    </div>
+    </br>
+    </br>
+    <div class="container">
+            
+    </div>
+    </br>
+    </br>
+    <div class="container">
+            <button class="btn btn-primary" ng-click="vm.reportPage()">Return to Report</button>
+        </div>

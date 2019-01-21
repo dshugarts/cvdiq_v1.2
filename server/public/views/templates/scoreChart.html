@@ -1,0 +1,63 @@
+<div ng-include="'views/partials/nav.html'"></div>
+<div class="container">
+    <h2>How Do I Earn Points?</h2>
+<form class="col-md-12" id="dataForm">
+    <div class="form-group col-md-6">
+    <h4><strong>Age:</strong></h4>
+        <p>Low Risk (+2 Points): Men 45 and under and Women 55 and under</p>
+        <p>High Risk (+0 Points): Men over 45 and Women over 55 </p>
+    </div>
+    <div class="form-group col-md-6">
+        <h4><strong>Nicotine:</strong></h4>
+        <p>Low Risk (+2 Points): Not a Nicotine User</p>
+        <p>High Risk (+0 Points): Nicotine User</p>
+    </div>
+    <div class="form-group col-md-6">
+            <h4><strong>Blood Pressure:</strong></h4>
+            <p>Low Risk (+2 Points): Systolic below 131 mmHg and Diastolic below 81 mmHg</p>
+            <p>Moderate Risk (+1 Point): Systolic 131-179 mmHg and Diastolic 81-119 mmHg</p>
+            <p>High Risk (+0 Points): Systolic 180+ mmHg and Diastolic 120+ mmHg</p>
+    </div>
+    <div class="form-group col-md-6">
+            <h4><strong>Fasting Glucose:</strong></h4>
+            <p>Low Risk (+2 Points): Under 100 mg/dL </p>
+            <p>Moderate Risk (+1 Point): Between 100 and 125 mg/dL</p>
+            <p>High Risk (+0 Points): Over 125 mg/dL</p>
+    </div>
+    <div class="form-group col-md-6">
+                <h4><strong>Waist Size (in.):</strong></h4>
+                <p>Low Risk (+2 Points): Men under 40in. and Women under 35in.</p>
+                <p>High Risk (+0 Points): Men over 40in. and Women over 35in.</p>
+    </div>
+    <div class="form-group col-md-6">
+                <h4><strong>HDL:</strong></h4>
+                <p>Low Risk (+2 Points): 60+ mg/dL</p>
+                <p>Moderate Risk (+1 Point): 41-59 mg/dL</p>
+                <p>High Risk (+0 Points): Men under 41 mg/dL and Women under 51 mg/dL </p>
+    </div>
+    <div class="form-group col-md-6">
+            <h4><strong>LDL:</strong></h4>
+            <p>Low Risk (+2 Points): Under 100 mg/dL</p>
+            <p>Moderate Risk (+1 Point): 130-159 mg/dL</p>
+            <p>High Risk (+0 Points): Over 159 mg/dL </p>
+</div>
+<div class="form-group col-md-6">
+        <h4><strong>Family History:</strong></h4>
+        <p>Low Risk (+2 Points): Father NOT diagnosed with CVD before 55 and Mother NOT diagnosed with CVD before 65</p>
+        <p>High Risk (+0 Points): Father diagnosed with CVD before 55 or Mother diagnosed with CVD before 65</p>
+</div>
+<div class="form-group col-md-6">
+        <h4><strong>Physical Activity:</strong></h4>
+        <p>Low Risk (+2 Points): Moderate physical activity over 150 min/week</p>
+        <p>High Risk (+0 Points): Moderate physical activity under 150 min/week</p>
+</div>
+<div class="form-group col-md-6">
+        <h4><strong>Sleep:</strong></h4>
+        <p>Low Risk (+2 Points): Sleeping 7+ hours/night</p>
+        <p>High Risk (+0 Points): Sleeping under 7 hours/night</p>
+</div>
+</form>
+</div>
+<div class="container">
+        <button ng-click="vm.dashView()" class="btn btn-danger">Back to Dashboard</button>
+</div> 
