@@ -11,7 +11,7 @@
   "dependencies": {
     "angular": "^1.6.9",
     "angular-route": "^1.6.9",
-    "bcrypt": "^1.0.3",
+    "bcrypt": "^3.0.3",
     "body-parser": "^1.18.2",
     "bootstrap": "^3.3.7",
     "chart.js": "^2.7.2",
