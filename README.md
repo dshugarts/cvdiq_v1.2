@@ -49,10 +49,12 @@
 	- [ ] points for improvement
 - [ ] Update metric algorithms to non-blood based and create separate blood-based form/report but    without the score
 - [ ] Fix date display on charts to remove time
+- [ ] Update value moved to detailed report?
 
 ## Echo
 - [ ] Refactor to starrhealth when angular material
 - [ ] Switch to angular material
+- [ ] Register user page should look different than login
 
 ## Foxtrot
 - [ ] Mobile view detailed revision
