@@ -15,9 +15,9 @@
 
 - [] Create a home page
 - [] Users create profile instead of just login
-	[] change password
-	[] add photo
-	[] email
+	- [] change password
+	- [] add photo
+	- [] email
 	[] gender
 	[] disclaimer
 	[] user role
