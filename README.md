@@ -13,7 +13,7 @@
 	- [ ] change in page title/head
 - [ ] After first login, direct to enter new data
 - [ ] After submitting data, route directly to dashboard
-- [ ] Remove empty button on dashboard
+- [x] Remove empty button on dashboard
 - [ ] when incorrect credentials, clear textboxes
 - [ ] when score = NaN, show score of 0
 
