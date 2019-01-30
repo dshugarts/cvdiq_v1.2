@@ -5,7 +5,7 @@
 - [ ] Fix score calculation/display timing
 - [ ] Rename pages something more understandable
 - [ ] User permissions/roles
-- [ ] Validate routes backend
+- [x] Validate routes backend
 - [ ] Validate routes front end
 - [ ] Fix sql calls on backend
 - [ ] Untangled Health - Name Change
@@ -58,3 +58,6 @@
 
 ## Foxtrot
 - [ ] Mobile view detailed revision
+
+## Golf
+- [ ] Apple Health Movement API Integration
