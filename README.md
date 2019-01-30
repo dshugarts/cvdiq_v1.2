@@ -1,12 +1,12 @@
 # cvdiq_v1.2
 
 ## Alpha
-- [ ] Create a home page
+- [x] Create a home page
 - [ ] Fix score calculation/display timing
 - [ ] Rename pages something more understandable
+	- [ ] test renamed routes
 - [ ] User permissions/roles
 - [x] Validate routes backend
-- [ ] Validate routes front end
 - [ ] Fix sql calls on backend
 - [ ] Untangled Health - Name Change
 	- [ ] Motto
@@ -29,6 +29,7 @@
 	- [ ] after score entered
 	- [ ] after update metric
 - [ ] Refactor controllers and services
+- [ ] Validate routes front end (user role validation)
 - [ ] Remove favicon
 - [ ] Implement .env file for api keys
 - [ ] Source filestack
