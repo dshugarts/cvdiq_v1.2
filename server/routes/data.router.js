@@ -6,8 +6,9 @@ const router = express.Router();
 router.get('/:id', (request, response) => {
   if (request.isAuthenticated()) {
   const id = request.params.id;
-  const sqlText = `SELECT * FROM data WHERE id=${id} ORDER BY entry_id DESC LIMIT 1`;
-  pool.query(sqlText)
+  console.log('ID EQUALS ' + id);
+  const sqlText = `SELECT * FROM data WHERE id=$1 ORDER BY entry_id DESC LIMIT 1`;
+  pool.query(sqlText, [id])
     .then(function(result) {
     //  console.log('Get result:', result);
       response.send(result.rows);

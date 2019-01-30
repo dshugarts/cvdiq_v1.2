@@ -170,20 +170,20 @@ myApp.service('DataService', ['$http', '$location', function($http, $location){
     }
 
     self.getData = function(id){
-     //   console.log('HHHHH', id);
+        console.log('HHHHH', id);
         $http({
           method: 'GET',
           url: `/data/${id}`
         }).then(function(response){
-     //     console.log('response', response.data);
+         console.log('response', response.data);
           self.dataArray = response.data;
           self.myScore = self.dataArray[0].cvd_score;
           self.pScore = ((self.myScore/20)*100) + "%";
-     //     console.log('DS myScore ', self.myScore);
+          console.log('DS myScore ', self.myScore);
           self.getAllReportData(self.dataArray);
           self.getAllResourceData(self.dataArray);
         }).catch(function(error){
-      //    console.log('Error getting data', error);
+         console.log('Error getting data', error);
         })
       } //end getData
 
