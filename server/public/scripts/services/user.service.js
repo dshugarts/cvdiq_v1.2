@@ -15,11 +15,11 @@ myApp.service('UserService', ['$http', '$location', function($http, $location){
         } else {
           //  console.log('UserService -- getuser -- failure');
             // user has no session, bounce them back to the login page
-            $location.path("/home");
+            $location.path("/landing");
         }
     },function(response){
     //  console.log('UserService -- getuser -- failure: ', response);
-      $location.path("/home");
+      $location.path("/landing");
     });
   },
 
