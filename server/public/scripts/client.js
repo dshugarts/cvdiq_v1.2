@@ -74,9 +74,9 @@ myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
         }
       }
     })
-    .when('/new', {
-      templateUrl: '/views/templates/new.html',
-      controller: 'NewController as vm',
+    .when('/disclaimer', {
+      templateUrl: '/views/templates/disclaimer.html',
+      controller: 'DisclaimerController as vm',
       resolve: {
         getuser : function(UserService){
           return UserService.getuser();

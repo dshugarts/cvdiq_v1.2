@@ -1,5 +1,5 @@
-myApp.controller('NewController', ['$http', '$location', 'UserService', 'DataService', function($http, $location, UserService, DataService) {
-   // console.log('NewController created');
+myApp.controller('DisclaimerController', ['$http', '$location', 'UserService', 'DataService', function($http, $location, UserService, DataService) {
+   // console.log('DisclaimerController created');
     var self = this;
     self.userService = UserService;
     self.dataService = DataService
