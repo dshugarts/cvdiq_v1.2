@@ -6,13 +6,14 @@
 - [ ] Rename pages something more understandable
 	- [ ] test renamed routes
 - [ ] User permissions/roles
+	- [ ] user role in dbms
 - [x] Validate routes backend
 - [x] Fix sql calls on backend
 - [x] Untangled Health - Name Change
 	- [x] Motto
 	- [x] change in page title/head
 - [ ] After first login, direct to enter new data
-	- [ ] Need login  counter in user table of dbms
+	- [ ] Need login counter in user table of dbms
 - [ ] After submitting data, route directly to dashboard
 - [x] Remove empty button on dashboard
 - [ ] when incorrect credentials, clear textboxes
@@ -31,7 +32,7 @@
 	- [ ] after update metric
 - [ ] Refactor controllers and services
 - [ ] Validate routes front end (user role validation)
-- [ ] Remove favicon
+- [x] Remove favicon
 - [ ] Implement .env file for api keys
 - [ ] Source filestack
 - [ ] Change About page to mission, goals, etc..
