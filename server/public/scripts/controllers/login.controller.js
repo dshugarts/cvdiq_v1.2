@@ -3,7 +3,8 @@ myApp.controller('LoginController', ['$http', '$location', 'UserService', functi
     var self = this;
     self.user = {
       username: '',
-      password: ''
+      password: '',
+      user_role: 1
     };
     self.message = '';
 

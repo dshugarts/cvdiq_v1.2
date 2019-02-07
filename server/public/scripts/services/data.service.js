@@ -177,7 +177,15 @@ myApp.service('DataService', ['$http', '$location', function($http, $location){
         }).then(function(response){
          console.log('response', response.data);
           self.dataArray = response.data;
-          self.myScore = self.dataArray[0].cvd_score;
+          console.log('DATA ARRAY', self.dataArray.length);
+          if (self.dataArray.length === 0) {
+              self.myScore = 0;
+              console.log('TEST 1 ' + self.myScore);
+          } else {
+            self.myScore = self.dataArray[0].cvd_score;
+            console.log('TEST 2 ' + self.myScore);
+          }
+          
           self.pScore = ((self.myScore/20)*100) + "%";
           console.log('DS myScore ', self.myScore);
           self.getAllReportData(self.dataArray);

@@ -11,7 +11,7 @@ myApp.controller('ScoreChartController', ['$http', '$location', 'UserService', '
     self.addEntry = DataService.addEntry;
 
     self.dashView = function() {
-        $location.url('/user');
+        $location.url('/dashboard');
     }
 
   }]);
