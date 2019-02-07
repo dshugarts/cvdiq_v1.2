@@ -8,10 +8,11 @@
 - [ ] User permissions/roles
 - [x] Validate routes backend
 - [x] Fix sql calls on backend
-- [ ] Untangled Health - Name Change
-	- [ ] Motto
-	- [ ] change in page title/head
+- [x] Untangled Health - Name Change
+	- [x] Motto
+	- [x] change in page title/head
 - [ ] After first login, direct to enter new data
+	- [ ] Need login  counter in user table of dbms
 - [ ] After submitting data, route directly to dashboard
 - [x] Remove empty button on dashboard
 - [ ] when incorrect credentials, clear textboxes
