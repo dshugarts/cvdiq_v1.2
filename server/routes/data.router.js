@@ -25,8 +25,8 @@ router.get('/:id', (request, response) => {
 router.get('/glu/:id', (request, response) => {
   if (request.isAuthenticated()) {
   const id = request.params.id;
-  const sqlText = `SELECT entry_id, id, data_date, glu_value FROM data WHERE id=${id} ORDER BY entry_id`;
-  pool.query(sqlText)
+  const sqlText = `SELECT entry_id, id, data_date, glu_value FROM data WHERE id=$1 ORDER BY entry_id`;
+  pool.query(sqlText, [id])
     .then(function(result) {
      // console.log('Get result:', result);
       response.send(result.rows);
@@ -43,8 +43,8 @@ router.get('/glu/:id', (request, response) => {
 router.get('/bmi/:id', (request, response) => {
   if (request.isAuthenticated()) {
   const id = request.params.id;
-  const sqlText = `SELECT entry_id, id, data_date, weight_value, height_value FROM data WHERE id=${id} ORDER BY entry_id`;
-  pool.query(sqlText)
+  const sqlText = `SELECT entry_id, id, data_date, weight_value, height_value FROM data WHERE id=$1 ORDER BY entry_id`;
+  pool.query(sqlText, [id])
     .then(function(result) {
      // console.log('Get result:', result);
       response.send(result.rows);
@@ -61,8 +61,8 @@ router.get('/bmi/:id', (request, response) => {
 router.get('/activity/:id', (request, response) => {
   if (request.isAuthenticated()) {
   const id = request.params.id;
-  const sqlText = `SELECT entry_id, id, data_date, physical_activity_value FROM data WHERE id=${id} ORDER BY entry_id`;
-  pool.query(sqlText)
+  const sqlText = `SELECT entry_id, id, data_date, physical_activity_value FROM data WHERE id=$1 ORDER BY entry_id`;
+  pool.query(sqlText, [id])
     .then(function(result) {
      // console.log('Get result:', result);
       response.send(result.rows);
@@ -79,8 +79,8 @@ router.get('/activity/:id', (request, response) => {
 router.get('/hdl/:id', (request, response) => {
   if (request.isAuthenticated()) {
   const id = request.params.id;
-  const sqlText = `SELECT entry_id, id, data_date, hdl_value FROM data WHERE id=${id} ORDER BY entry_id`;
-  pool.query(sqlText)
+  const sqlText = `SELECT entry_id, id, data_date, hdl_value FROM data WHERE id=$1 ORDER BY entry_id`;
+  pool.query(sqlText, [id])
     .then(function(result) {
      // console.log('Get result:', result);
       response.send(result.rows);
@@ -97,8 +97,8 @@ router.get('/hdl/:id', (request, response) => {
 router.get('/ldl/:id', (request, response) => {
   if (request.isAuthenticated()) {
   const id = request.params.id;
-  const sqlText = `SELECT entry_id, id, data_date, ldl_value FROM data WHERE id=${id} ORDER BY entry_id`;
-  pool.query(sqlText)
+  const sqlText = `SELECT entry_id, id, data_date, ldl_value FROM data WHERE id=$1 ORDER BY entry_id`;
+  pool.query(sqlText, [id])
     .then(function(result) {
     //  console.log('Get result:', result);
       response.send(result.rows);
@@ -115,8 +115,8 @@ router.get('/ldl/:id', (request, response) => {
 router.get('/trg/:id', (request, response) => {
   if (request.isAuthenticated()) {
   const id = request.params.id;
-  const sqlText = `SELECT entry_id, id, data_date, trg_value FROM data WHERE id=${id} ORDER BY entry_id`;
-  pool.query(sqlText)
+  const sqlText = `SELECT entry_id, id, data_date, trg_value FROM data WHERE id=$1 ORDER BY entry_id`;
+  pool.query(sqlText, [id])
     .then(function(result) {
     //  console.log('Get result:', result);
       response.send(result.rows);
@@ -133,8 +133,8 @@ router.get('/trg/:id', (request, response) => {
 router.get('/hearthealth/:id', (request, response) => {
   if (request.isAuthenticated()) {
   const id = request.params.id;
-  const sqlText = `SELECT entry_id, id, data_date, cvd_score FROM data WHERE id=${id} ORDER BY entry_id`;
-  pool.query(sqlText)
+  const sqlText = `SELECT entry_id, id, data_date, cvd_score FROM data WHERE id=$1 ORDER BY entry_id`;
+  pool.query(sqlText, [id])
     .then(function(result) {
     //  console.log('Get result:', result);
       response.send(result.rows);
@@ -151,8 +151,8 @@ router.get('/hearthealth/:id', (request, response) => {
 router.get('/waist/:id', (request, response) => {
   if (request.isAuthenticated()) {
   const id = request.params.id;
-  const sqlText = `SELECT entry_id, id, data_date, waist_value FROM data WHERE id=${id} ORDER BY entry_id`;
-  pool.query(sqlText)
+  const sqlText = `SELECT entry_id, id, data_date, waist_value FROM data WHERE id=$1 ORDER BY entry_id`;
+  pool.query(sqlText, [id])
     .then(function(result) {
     //  console.log('Get result:', result);
       response.send(result.rows);
@@ -169,8 +169,8 @@ router.get('/waist/:id', (request, response) => {
 router.get('/sleep/:id', (request, response) => {
   if (request.isAuthenticated()) {
   const id = request.params.id;
-  const sqlText = `SELECT entry_id, id, data_date, sleep_value FROM data WHERE id=${id} ORDER BY entry_id`;
-  pool.query(sqlText)
+  const sqlText = `SELECT entry_id, id, data_date, sleep_value FROM data WHERE id=$1 ORDER BY entry_id`;
+  pool.query(sqlText, [id])
     .then(function(result) {
     //  console.log('Get result:', result);
       response.send(result.rows);
@@ -187,8 +187,8 @@ router.get('/sleep/:id', (request, response) => {
 router.get('/weight/:id', (request, response) => {
   if (request.isAuthenticated()) {
   const id = request.params.id;
-  const sqlText = `SELECT entry_id, id, data_date, weight_value FROM data WHERE id=${id} ORDER BY entry_id`;
-  pool.query(sqlText)
+  const sqlText = `SELECT entry_id, id, data_date, weight_value FROM data WHERE id=$1 ORDER BY entry_id`;
+  pool.query(sqlText, [id])
     .then(function(result) {
      // console.log('Get result:', result);
       response.send(result.rows);
@@ -205,8 +205,8 @@ router.get('/weight/:id', (request, response) => {
 router.get('/bp/:id', (request, response) => {
   if (request.isAuthenticated()) {
   const id = request.params.id;
-  const sqlText = `SELECT entry_id, id, data_date, systolic_value, diastolic_value FROM data WHERE id=${id} ORDER BY entry_id`;
-  pool.query(sqlText)
+  const sqlText = `SELECT entry_id, id, data_date, systolic_value, diastolic_value FROM data WHERE id=$1 ORDER BY entry_id`;
+  pool.query(sqlText, [id])
     .then(function(result) {
     //  console.log('Get result:', result);
       response.send(result.rows);

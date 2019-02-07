@@ -7,7 +7,7 @@
 	- [ ] test renamed routes
 - [ ] User permissions/roles
 - [x] Validate routes backend
-- [ ] Fix sql calls on backend
+- [x] Fix sql calls on backend
 - [ ] Untangled Health - Name Change
 	- [ ] Motto
 	- [ ] change in page title/head
