@@ -1,10 +1,10 @@
 
-myApp.controller('LandingController', ['$location', function($location) {
+myApp.controller('HomeController', ['$location', function($location) {
     // console.log('LandingController created');
     var self = this;
 
     self.toLogin = function() {
-        $location.url('/landing')
+        $location.url('/login')
       } // end toLogin
 
   }]);

@@ -9,21 +9,11 @@ myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
     })
     .when('/home', {
       templateUrl: '/views/templates/home.html',
-      controller: 'LandingController as vm',
-      // resolve: {
-      //   getuser : function(UserService){
-      //     return UserService.getuser();
-      //   }
-      // }
+      controller: 'HomeController as vm',
     })
-    .when('/landing', {
-      templateUrl: '/views/templates/landing.html',
+    .when('/login', {
+      templateUrl: '/views/templates/login.html',
       controller: 'LoginController as vm',
-      resolve: {
-        getuser : function(UserService){
-          return UserService.getuser();
-        }
-      }
     })
     .when('/resources', {
       templateUrl: '/views/templates/resources.html',
