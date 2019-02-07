@@ -65,7 +65,7 @@ myApp.service('DataService', ['$http', '$location', function($http, $location){
     self.cvdRisk = '';
 
     self.letPass = function() {
-        $location.url('/user');
+        $location.url('/dashboard');
     }
 
     self.goBpResource = function() {

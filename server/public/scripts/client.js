@@ -46,8 +46,8 @@ myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
       templateUrl: '/views/templates/register.html',
       controller: 'LoginController as vm',
     })
-    .when('/user', {
-      templateUrl: '/views/templates/user.html',
+    .when('/dashboard', {
+      templateUrl: '/views/templates/dashboard.html',
       controller: 'UserController as vm',
       resolve: {
         getuser : function(UserService){
