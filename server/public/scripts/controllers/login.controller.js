@@ -11,6 +11,8 @@ myApp.controller('LoginController', ['$http', '$location', 'UserService', functi
     self.login = function () {
       if (self.user.username === '' || self.user.password === '') {
         self.message = "Enter your username and password!";
+        self.user.username = "";
+        self.user.password = "";
       } else {
        // console.log('sending to server...', self.user);
         $http.post('/api/user/login', self.user).then(
@@ -22,11 +24,17 @@ myApp.controller('LoginController', ['$http', '$location', 'UserService', functi
             } else {
              // console.log('failure error: ', response);
               self.message = "Incorrect credentials. Please try again.";
+              console.log('ERROR 1');
+              self.user.username = "";
+              self.user.password = "";
             }
           },
           function (response) {
            // console.log('failure error: ', response);
             self.message = "Incorrect credentials. Please try again.";
+            console.log('ERROR 2');
+            self.user.username = "";
+            self.user.password = "";
           });
       }
     };
@@ -34,6 +42,8 @@ myApp.controller('LoginController', ['$http', '$location', 'UserService', functi
     self.registerUser = function () {
       if (self.user.username === '' || self.user.password === '') {
         self.message = "Choose a username and password!";
+        self.user.username = "";
+        self.user.password = "";
       } else {
        // console.log('sending to server...', self.user);
         $http.post('/api/user/register', self.user).then(function (response) {

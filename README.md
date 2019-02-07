@@ -5,19 +5,16 @@
 - [ ] Fix score calculation/display timing
 - [x] Rename pages something more understandable
 	- [x] test renamed routes
-- [ ] User permissions/roles
-	- [ ] user role in dbms
+- [x] User permissions/roles
+	- [x] user role in dbms
 - [x] Validate routes backend
 - [x] Fix sql calls on backend
 - [x] Untangled Health - Name Change
 	- [x] Motto
 	- [x] change in page title/head
-- [ ] After first login, direct to enter new data
-	- [ ] Need login counter in user table of dbms
-- [ ] After submitting data, route directly to dashboard
 - [x] Remove empty button on dashboard
-- [ ] when incorrect credentials, clear textboxes
-- [ ] when score = NaN, show score of 0
+- [x] when incorrect credentials, clear textboxes
+- [x] when score = NaN, show score of 0
 
 ## Bravo
 - [ ] Users create profile instead of just login
@@ -27,9 +24,11 @@
 	- [ ] gender
 	- [ ] disclaimer
 	- [ ] user role
+- [ ] Remove gender from form and into profile
 - [ ] Add sweet alerts
 	- [ ] after score entered
 	- [ ] after update metric
+- [ ] After submitting data, route directly to dashboard
 - [ ] Refactor controllers and services
 - [ ] Validate routes front end (user role validation)
 - [x] Remove favicon
@@ -38,13 +37,14 @@
 - [ ] Change About page to mission, goals, etc..
 
 ## Charlie
-- [ ] Remove gender from form and into profile
 - [ ] Instead of reports and suggestions in toolbar, have links on dashboard
 - [ ] Incorporate suggestions into detailed report table to combine the two pages
 	- [ ] show points earned
 	- [ ] all links in this table
 - [ ] Move enter new data link to dashboard and remove from toolbar
 - [ ] Move update data to detailed report as link or individually into table
+- [ ] After first login, direct to enter new data
+	- [ ] Need login counter in user table of dbms
 
 ## Delta
 - [ ] Revised metrics
