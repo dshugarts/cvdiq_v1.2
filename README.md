@@ -3,8 +3,8 @@
 ## Alpha
 - [x] Create a home page
 - [ ] Fix score calculation/display timing
-- [ ] Rename pages something more understandable
-	- [ ] test renamed routes
+- [x] Rename pages something more understandable
+	- [x] test renamed routes
 - [ ] User permissions/roles
 	- [ ] user role in dbms
 - [x] Validate routes backend
