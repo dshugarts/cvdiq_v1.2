@@ -35,6 +35,7 @@
 - [ ] Implement .env file for api keys
 - [ ] Source filestack
 - [ ] Change About page to mission, goals, etc..
+- [ ] Remove console logs
 
 ## Charlie
 - [ ] Instead of reports and suggestions in toolbar, have links on dashboard
