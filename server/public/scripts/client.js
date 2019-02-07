@@ -25,15 +25,6 @@ myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
         }
       }
     })
-    .when('/report', {
-      templateUrl: '/views/templates/report.html',
-      controller: 'ReportController as vm',
-      resolve: {
-        getuser : function(UserService){
-          return UserService.getuser();
-        }
-      }
-    })
     .when('/resources', {
       templateUrl: '/views/templates/resources.html',
       controller: 'ResourcesController as vm',
@@ -173,8 +164,8 @@ myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
         }
       }
     })
-    .when('/aaa', {
-      templateUrl: '/views/templates/aaa.html',
+    .when('/report', {
+      templateUrl: '/views/templates/report.html',
       controller: 'ReportController as vm',
       resolve: {
         getuser : function(UserService){

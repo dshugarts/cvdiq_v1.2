@@ -32,7 +32,7 @@ myApp.service('PostDataService', ['$http', '$location', function($http, $locatio
 
 
     self.reportPage = function() {
-      $location.url('/aaa');
+      $location.url('/report');
     } // end reportPage
 
     self.resourcePage = function() {
