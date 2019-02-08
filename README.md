@@ -21,7 +21,8 @@
 	- [ ] add photo
 	- [ ] email
 	- [ ] gender
-	- [ ] disclaimer
+	- [ ] disclaimer 
+	- [ ] password match validation
 	- [x] user role
 - [ ] Remove gender from form and into profile
 - [ ] Fix score calculation/display timing
