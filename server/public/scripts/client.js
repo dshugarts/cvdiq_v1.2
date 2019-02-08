@@ -51,7 +51,7 @@ myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
       controller: 'UserController as vm',
       resolve: {
         getuser : function(UserService){
-          return UserService.getuser();
+          return UserService.getParticipant();
         }
       }
     })

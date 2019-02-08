@@ -24,12 +24,58 @@ myApp.service('UserService', ['$http', '$location', function($http, $location){
     });
   },
 
-  self.logout = function() {
+  self.getParticipant = function () {
+    $http.get('/api/user').then(function (response) {
+        if (response.data.user_role === 1) {
+            // user has a curret session on the server\
+            self.userObject.id = response.data.id;
+            self.userObject.userName = response.data.username;
+            self.userObject.user_role = response.data.user_role;
+         //   console.log('UserService -- getStudent -- User Data: ', self.userObject.userName);
+        } else {
+         //   console.log('UserService -- getStudent -- failure');
+            // user has no session, bounce them back to the login page
+            swal("You are not authorized to view this page.", "", "warning");
+            $location.path("/home");
+        }
+    }, function (response) {
+     //   console.log('UserService -- getStudent -- failure: ', response);
+        swal("You are not authorized to view this page.", "", "warning");
+        $location.path("/home");
+    });
+
+
+  }, // end getParticipant
+
+  self.getCoach = function () {
+    $http.get('/api/user').then(function (response) {
+        if (response.data.user_role === 2) {
+            // user has a curret session on the server
+            self.userObject.id = response.data.id;
+            self.userObject.userName = response.data.username;
+            self.userObject.user_role = response.data.user_role;
+         //   console.log('UserService -- getCoach -- User Data: ', self.userObject.userName);
+        } else {
+        //    console.log('UserService -- getCoach -- failure');
+            // user has no session, bounce them back to the login page
+            swal("You are not authorized to view this page.", "", "warning");
+            $location.path("/home");
+        }
+    }, function (response) {
+      //  console.log('UserService -- getCoach -- failure: ', response);
+        swal("You are not authorized to view this page.", "", "warning");
+        self.logout();
+    });
+
+
+}, // end getCoach
+
+self.logout = function() {
   //  console.log('UserService -- logout');
     $http.get('/api/user/logout').then(function(response) {
     //  console.log('UserService -- logout -- logged out');
       $location.path("/home");
       location.reload(true);
     });
-  }
+  } // end logout
 }]);

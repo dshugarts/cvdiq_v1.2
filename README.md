@@ -22,11 +22,10 @@
 	- [ ] email
 	- [ ] gender
 	- [ ] disclaimer
-	- [ ] user role
+	- [x] user role
 - [ ] Remove gender from form and into profile
 - [ ] Fix score calculation/display timing
-- [ ] After first login, direct to enter new data
-	- [ ] Need login counter in user table of dbms
+- [x] After first login, direct to enter new data
 - [x] Add sweet alerts
 	- [ ] after score entered
 	- [ ] after update metric
@@ -36,7 +35,6 @@
 - [x] Remove favicon
 - [ ] Implement .env file for api keys
 - [ ] Source filestack
-- [ ] Change About page to mission, goals, etc..
 - [ ] change password
 - [ ] Remove console logs
 
@@ -60,6 +58,7 @@
 - [ ] Refactor to starrhealth when angular material
 - [ ] Switch to angular material
 - [ ] Register user page should look different than login
+- [ ] Change About page to mission, goals, etc..
 
 ## Foxtrot
 - [ ] Mobile view detailed revision
