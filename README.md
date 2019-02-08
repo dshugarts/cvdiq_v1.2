@@ -27,7 +27,7 @@
 - [ ] Fix score calculation/display timing
 - [ ] After first login, direct to enter new data
 	- [ ] Need login counter in user table of dbms
-- [ ] Add sweet alerts
+- [x] Add sweet alerts
 	- [ ] after score entered
 	- [ ] after update metric
 - [ ] After submitting data, route directly to dashboard
