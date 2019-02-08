@@ -20,7 +20,7 @@ myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
       controller: 'ResourcesController as vm',
       resolve: {
         getuser : function(UserService){
-          return UserService.getuser();
+          return UserService.getParticipant();
         }
       }
     })
@@ -29,7 +29,7 @@ myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
       controller: 'UpdateController as vm',
       resolve: {
         getuser : function(UserService){
-          return UserService.getuser();
+          return UserService.getParticipant();
         }
       }
     })
@@ -38,7 +38,7 @@ myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
       controller: 'ModifyController as vm',
       resolve: {
         getuser : function(UserService){
-          return UserService.getuser();
+          return UserService.getParticipant();
         }
       }
     })
@@ -60,7 +60,7 @@ myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
       controller: 'DisclaimerController as vm',
       resolve: {
         getuser : function(UserService){
-          return UserService.getuser();
+          return UserService.getParticipant();
         }
       }
     })
@@ -69,7 +69,7 @@ myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
       controller: 'DataController as vm',
       resolve: {
         getuser : function(UserService){
-          return UserService.getuser();
+          return UserService.getParticipant();
         }
       }
     })
@@ -78,7 +78,7 @@ myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
       controller: 'ScoreChartController as vm',
       resolve: {
         getuser : function(UserService){
-          return UserService.getuser();
+          return UserService.getParticipant();
         }
       }
     })
@@ -87,7 +87,7 @@ myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
       controller: 'InfoController as vm',
       resolve: {
         getuser : function(UserService){
-          return UserService.getuser();
+          return UserService.getParticipant();
         }
       }
     })
@@ -96,7 +96,7 @@ myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
       controller: 'GlucoseController as vm',
       resolve: {
         getuser : function(UserService){
-          return UserService.getuser();
+          return UserService.getParticipant();
         }
       }
     })
@@ -105,7 +105,7 @@ myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
       controller: 'HDLController as vm',
       resolve: {
         getuser : function(UserService){
-          return UserService.getuser();
+          return UserService.getParticipant();
         }
       }
     })
@@ -114,7 +114,7 @@ myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
       controller: 'LDLController as vm',
       resolve: {
         getuser : function(UserService){
-          return UserService.getuser();
+          return UserService.getParticipant();
         }
       }
     })
@@ -123,7 +123,7 @@ myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
       controller: 'TRGController as vm',
       resolve: {
         getuser : function(UserService){
-          return UserService.getuser();
+          return UserService.getParticipant();
         }
       }
     })
@@ -132,7 +132,7 @@ myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
       controller: 'HeartHealthController as vm',
       resolve: {
         getuser : function(UserService){
-          return UserService.getuser();
+          return UserService.getParticipant();
         }
       }
     })
@@ -141,7 +141,7 @@ myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
       controller: 'WaistController as vm',
       resolve: {
         getuser : function(UserService){
-          return UserService.getuser();
+          return UserService.getParticipant();
         }
       }
     })
@@ -150,7 +150,7 @@ myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
       controller: 'ActivityController as vm',
       resolve: {
         getuser : function(UserService){
-          return UserService.getuser();
+          return UserService.getParticipant();
         }
       }
     })
@@ -159,7 +159,7 @@ myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
       controller: 'ReportController as vm',
       resolve: {
         getuser : function(UserService){
-          return UserService.getuser();
+          return UserService.getParticipant();
         }
       }
     })
@@ -168,7 +168,7 @@ myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
       controller: 'ReportController as vm',
       resolve: {
         getuser : function(UserService){
-          return UserService.getuser();
+          return UserService.getParticipant();
         }
       }
     })
@@ -177,7 +177,7 @@ myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
       controller: 'ReportController as vm',
       resolve: {
         getuser : function(UserService){
-          return UserService.getuser();
+          return UserService.getParticipant();
         }
       }
     })
@@ -186,7 +186,7 @@ myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
       controller: 'ReportController as vm',
       resolve: {
         getuser : function(UserService){
-          return UserService.getuser();
+          return UserService.getParticipant();
         }
       }
     })
@@ -195,7 +195,7 @@ myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
       controller: 'ReportController as vm',
       resolve: {
         getuser : function(UserService){
-          return UserService.getuser();
+          return UserService.getParticipant();
         }
       }
     })
@@ -204,7 +204,7 @@ myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
       controller: 'ReportController as vm',
       resolve: {
         getuser : function(UserService){
-          return UserService.getuser();
+          return UserService.getParticipant();
         }
       }
     })
@@ -213,7 +213,7 @@ myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
       controller: 'ReportController as vm',
       resolve: {
         getuser : function(UserService){
-          return UserService.getuser();
+          return UserService.getParticipant();
         }
       }
     })
@@ -222,7 +222,7 @@ myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
       controller: 'ReportController as vm',
       resolve: {
         getuser : function(UserService){
-          return UserService.getuser();
+          return UserService.getParticipant();
         }
       }
     })
@@ -231,7 +231,7 @@ myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
       controller: 'ReportController as vm',
       resolve: {
         getuser : function(UserService){
-          return UserService.getuser();
+          return UserService.getParticipant();
         }
       }
     })
@@ -240,7 +240,7 @@ myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
       controller: 'ReportController as vm',
       resolve: {
         getuser : function(UserService){
-          return UserService.getuser();
+          return UserService.getParticipant();
         }
       }
     })
@@ -249,7 +249,7 @@ myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
       controller: 'ReportController as vm',
       resolve: {
         getuser : function(UserService){
-          return UserService.getuser();
+          return UserService.getParticipant();
         }
       }
     })
@@ -258,7 +258,7 @@ myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
       controller: 'ReportController as vm',
       resolve: {
         getuser : function(UserService){
-          return UserService.getuser();
+          return UserService.getParticipant();
         }
       }
     })
@@ -267,7 +267,7 @@ myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
       controller: 'ReportController as vm',
       resolve: {
         getuser : function(UserService){
-          return UserService.getuser();
+          return UserService.getParticipant();
         }
       }
     })
@@ -276,7 +276,7 @@ myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
       controller: 'ReportController as vm',
       resolve: {
         getuser : function(UserService){
-          return UserService.getuser();
+          return UserService.getParticipant();
         }
       }
     })
@@ -285,7 +285,7 @@ myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
       controller: 'ReportController as vm',
       resolve: {
         getuser : function(UserService){
-          return UserService.getuser();
+          return UserService.getParticipant();
         }
       }
     })
@@ -294,7 +294,7 @@ myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
       controller: 'ReportController as vm',
       resolve: {
         getuser : function(UserService){
-          return UserService.getuser();
+          return UserService.getParticipant();
         }
       }
     })
@@ -303,7 +303,7 @@ myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
       controller: 'ReportController as vm',
       resolve: {
         getuser : function(UserService){
-          return UserService.getuser();
+          return UserService.getParticipant();
         }
       }
     })
@@ -312,7 +312,7 @@ myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
       controller: 'ReportController as vm',
       resolve: {
         getuser : function(UserService){
-          return UserService.getuser();
+          return UserService.getParticipant();
         }
       }
     })
@@ -321,7 +321,7 @@ myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
       controller: 'ReportController as vm',
       resolve: {
         getuser : function(UserService){
-          return UserService.getuser();
+          return UserService.getParticipant();
         }
       }
     })
@@ -330,7 +330,7 @@ myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
       controller: 'ReportController as vm',
       resolve: {
         getuser : function(UserService){
-          return UserService.getuser();
+          return UserService.getParticipant();
         }
       }
     })
@@ -339,7 +339,7 @@ myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
       controller: 'ReportController as vm',
       resolve: {
         getuser : function(UserService){
-          return UserService.getuser();
+          return UserService.getParticipant();
         }
       }
     })
@@ -348,7 +348,7 @@ myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
       controller: 'ReportController as vm',
       resolve: {
         getuser : function(UserService){
-          return UserService.getuser();
+          return UserService.getParticipant();
         }
       }
     })
@@ -357,7 +357,7 @@ myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
       controller: 'BMIController as vm',
       resolve: {
         getuser : function(UserService){
-          return UserService.getuser();
+          return UserService.getParticipant();
         }
       }
     })
@@ -366,7 +366,7 @@ myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
       controller: 'SleepController as vm',
       resolve: {
         getuser : function(UserService){
-          return UserService.getuser();
+          return UserService.getParticipant();
         }
       }
     })
@@ -375,7 +375,7 @@ myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
       controller: 'WeightController as vm',
       resolve: {
         getuser : function(UserService){
-          return UserService.getuser();
+          return UserService.getParticipant();
         }
       }
     })
@@ -384,7 +384,7 @@ myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
       controller: 'BPController as vm',
       resolve: {
         getuser : function(UserService){
-          return UserService.getuser();
+          return UserService.getParticipant();
         }
       }
     })

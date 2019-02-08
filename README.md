@@ -31,7 +31,7 @@
 	- [ ] after update metric
 - [ ] After submitting data, route directly to dashboard
 - [ ] Refactor controllers and services
-- [ ] Validate routes front end (user role validation)
+- [x] Validate routes front end (user role validation)
 - [x] Remove favicon
 - [ ] Implement .env file for api keys
 - [ ] Source filestack
