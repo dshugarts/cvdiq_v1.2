@@ -2,7 +2,6 @@
 
 ## Alpha
 - [x] Create a home page
-- [ ] Fix score calculation/display timing
 - [x] Rename pages something more understandable
 	- [x] test renamed routes
 - [x] User permissions/roles
@@ -18,13 +17,16 @@
 
 ## Bravo
 - [ ] Users create profile instead of just login
-	- [ ] change password
+	- [ ] update dbms to copy starr health
 	- [ ] add photo
 	- [ ] email
 	- [ ] gender
 	- [ ] disclaimer
 	- [ ] user role
 - [ ] Remove gender from form and into profile
+- [ ] Fix score calculation/display timing
+- [ ] After first login, direct to enter new data
+	- [ ] Need login counter in user table of dbms
 - [ ] Add sweet alerts
 	- [ ] after score entered
 	- [ ] after update metric
@@ -35,6 +37,7 @@
 - [ ] Implement .env file for api keys
 - [ ] Source filestack
 - [ ] Change About page to mission, goals, etc..
+- [ ] change password
 - [ ] Remove console logs
 
 ## Charlie
@@ -44,14 +47,12 @@
 	- [ ] all links in this table
 - [ ] Move enter new data link to dashboard and remove from toolbar
 - [ ] Move update data to detailed report as link or individually into table
-- [ ] After first login, direct to enter new data
-	- [ ] Need login counter in user table of dbms
 
 ## Delta
 - [ ] Revised metrics
 	- [ ] more scoring levels
 	- [ ] points for improvement
-- [ ] Update metric algorithms to non-blood based and create separate blood-based form/report but    without the score
+- [ ] Update metric algorithms to non-blood based and create separate blood-based form/report but without the score
 - [ ] Fix date display on charts to remove time
 - [ ] Update value moved to detailed report?
 
