@@ -34,7 +34,7 @@
 - [ ] Refactor controllers and services
 - [x] Validate routes front end (user role validation)
 - [x] Remove favicon
-- [ ] Implement .env file for api keys
+- [x] Implement .env file for api keys
 - [ ] Source filestack
 - [ ] change password
 - [ ] Remove console logs
