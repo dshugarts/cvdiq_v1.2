@@ -16,28 +16,20 @@
 - [x] when score = NaN, show score of 0
 
 ## Bravo
-- [ ] Users create profile instead of just login
-	- [ ] update dbms to copy starr health
-	- [ ] add photo
-	- [ ] email
-	- [ ] gender
-	- [ ] disclaimer 
-	- [ ] password match validation
-	- [x] user role
-- [ ] Remove gender from form and into profile
+- [x] Users create profile instead of just login
+	- [x] update dbms to copy starr health
+	- [x] email
+	- [x] disclaimer 
+	- [x] user rol
 - [ ] Fix score calculation/display timing
 - [x] After first login, direct to enter new data
 - [x] Add sweet alerts
 	- [ ] after score entered
 	- [ ] after update metric
 - [ ] After submitting data, route directly to dashboard
-- [ ] Refactor controllers and services
 - [x] Validate routes front end (user role validation)
 - [x] Remove favicon
 - [x] Implement .env file for api keys
-- [ ] Source filestack
-- [ ] change password
-- [ ] Remove console logs
 
 ## Charlie
 - [ ] Instead of reports and suggestions in toolbar, have links on dashboard
@@ -54,6 +46,15 @@
 - [ ] Update metric algorithms to non-blood based and create separate blood-based form/report but without the score
 - [ ] Fix date display on charts to remove time
 - [ ] Update value moved to detailed report?
+- [ ] Remove gender from form and into signup process
+- [ ] Remove Age from data form and automatically generate from signup dob
+- [ ] Add account settings page on dashboard
+	- [ ] Change Password
+	- [ ] Source filestack
+	- [ ] Add Photo
+	- [ ] PDF Reporting
+- [ ] Refactor controllers and services
+- [ ] Remove console logs
 
 ## Echo
 - [ ] Refactor to starrhealth when angular material
