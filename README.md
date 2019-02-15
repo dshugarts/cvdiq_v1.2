@@ -22,11 +22,12 @@
 	- [x] disclaimer 
 	- [x] user rol
 - [ ] Fix score calculation/display timing
+	- [ ] After submitting data, route directly to dashboard
+	- [ ] After login, route directly to dashboard
 - [x] After first login, direct to enter new data
 - [x] Add sweet alerts
-	- [ ] after score entered
-	- [ ] after update metric
-- [ ] After submitting data, route directly to dashboard
+	- [x] after score entered
+	- [x] after update metric
 - [x] Validate routes front end (user role validation)
 - [x] Remove favicon
 - [x] Implement .env file for api keys

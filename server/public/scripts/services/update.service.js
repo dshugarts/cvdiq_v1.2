@@ -19,6 +19,7 @@ myApp.service('UpdateService', ['$http', '$location', 'DataService', function($h
           //  console.log('Update response = ', response);
             self.getData(entry.id);
         }).then(function(response) {
+            swal("Data successfully updated!", "", "success")
             $location.url('/data');
             self.newEntry = {};
         }).catch(function (error) {

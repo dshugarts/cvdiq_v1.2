@@ -162,6 +162,7 @@ myApp.service('DataService', ['$http', '$location', function($http, $location){
          //   console.log('post post', response, entry.id);
             self.getData(entry.id);
         }).then(function(response) {
+            swal("Data successfully entered!", "", "success")
             $location.url('/data');
             self.newEntry = {};
         }).catch(function (error) {
