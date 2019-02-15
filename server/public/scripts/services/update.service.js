@@ -7,7 +7,12 @@ myApp.service('UpdateService', ['$http', '$location', 'DataService', function($h
     self.entryObject = {};
 
 
-
+    self.toDashboard = function() {
+        
+        swal("Data successfully entered!", "", "success")
+        $location.url('/dashboard');
+        self.newEntry = {};
+    }
 
     self.putData = function(entry) {
       //  console.log(entry);
@@ -18,10 +23,7 @@ myApp.service('UpdateService', ['$http', '$location', 'DataService', function($h
         }).then(function(response) {
           //  console.log('Update response = ', response);
             self.getData(entry.id);
-        }).then(function(response) {
-            swal("Data successfully updated!", "", "success")
-            $location.url('/data');
-            self.newEntry = {};
+            self.toDashboard();
         }).catch(function (error) {
           //  console.log('put error', error);
         })

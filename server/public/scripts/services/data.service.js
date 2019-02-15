@@ -152,6 +152,24 @@ myApp.service('DataService', ['$http', '$location', function($http, $location){
         $location.url('/bp_report')
     }
 
+    self.toDashboard = function() {
+        swal("Data successfully entered!", "", "success")
+        $location.url('/dashboard');
+        self.newEntry = {};
+    }
+
+    self.toMiddle = function(id) {
+        $http({
+            method: 'GET',
+            url: `/signup/middle/${id}`
+          }).then(function(response){
+           console.log('MIDDLE', response.data);
+            self.toDashboard();
+          }).catch(function(error){
+           console.log('Error getting data', error);
+          })
+    }
+
     self.postData = function(entry) {
       //  console.log(entry);
         $http({
@@ -161,10 +179,7 @@ myApp.service('DataService', ['$http', '$location', function($http, $location){
         }).then(function (response) {
          //   console.log('post post', response, entry.id);
             self.getData(entry.id);
-        }).then(function(response) {
-            swal("Data successfully entered!", "", "success")
-            $location.url('/data');
-            self.newEntry = {};
+            self.toMiddle(entry.id);
         }).catch(function (error) {
          //   console.log('post error', error);
         })
@@ -181,10 +196,10 @@ myApp.service('DataService', ['$http', '$location', function($http, $location){
           console.log('DATA ARRAY', self.dataArray.length);
           if (self.dataArray.length === 0) {
               self.myScore = 0;
-              console.log('TEST 1 ' + self.myScore);
+              console.log('TEST 1 ', self.myScore);
           } else {
             self.myScore = self.dataArray[0].cvd_score;
-            console.log('TEST 2 ' + self.myScore);
+            console.log('TEST 2 ',  self.myScore);
           }
           
           self.pScore = ((self.myScore/20)*100) + "%";

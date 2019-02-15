@@ -44,7 +44,23 @@ router.post('/', (request, response) => {
   }); // end participant info update
 
 
-
+  router.get('/middle/:id', (request, response) => {
+    if (request.isAuthenticated()) {
+      const id = request.params.id;
+      const sqlText = `SELECT id, username, user_role FROM users WHERE id=$1`;
+      pool.query(sqlText, [id])
+        .then(function (result) {
+          //  console.log('Get result:', result);
+          response.send(result.rows);
+        })
+        .catch(function (error) {
+          //  console.log('Error on Get:', error);
+          response.sendStatus(500);
+        })
+    } else {
+        response.sendStatus(403);
+    }
+  }); // end get user by name
 
 
 

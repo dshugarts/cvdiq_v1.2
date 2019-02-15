@@ -11,7 +11,7 @@ myApp.controller('UserController', ['UserService', 'DataService', function(UserS
   self.pScore = DataService.pScore;
 
 
-self.getData(self.id);
+ // self.getData(self.id);
   
  const sectors = [{
   color : "red",
@@ -29,7 +29,7 @@ self.getData(self.id);
 
   var g = new JustGage({
     id: "gauge",
-    value: self.myScore,
+    value: DataService.myScore,
     min: 0,
     max: 20,
     customSectors: sectors,
