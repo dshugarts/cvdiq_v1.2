@@ -2,7 +2,7 @@ myApp.controller('DisclaimerController', ['$http', '$location', 'UserService', '
    // console.log('DisclaimerController created');
     var self = this;
     self.userService = UserService;
-    self.dataService = DataService
+    self.dataService = DataService;
     self.userObject = UserService.userObject;
     self.dataArray = DataService.dataArray;
     self.getData = DataService.getData;

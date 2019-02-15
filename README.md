@@ -23,7 +23,7 @@
 	- [x] user rol
 - [ ] Fix score calculation/display timing
 	- [ ] After submitting data, route directly to dashboard
-	- [ ] After login, route directly to dashboard
+	- [x] After login, route directly to dashboard
 - [x] After first login, direct to enter new data
 - [x] Add sweet alerts
 	- [x] after score entered

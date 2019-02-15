@@ -1,6 +1,7 @@
-myApp.controller('LoginController', ['$http', '$location', 'UserService', function($http, $location, UserService) {
+myApp.controller('LoginController', ['$http', '$location', 'UserService', 'DataService', function($http, $location, UserService, DataService) {
     // console.log('LoginController created');
     var self = this;
+    self.dataService = DataService;
     self.user = {
       username: '',
       password: '',
@@ -87,7 +88,8 @@ myApp.controller('LoginController', ['$http', '$location', 'UserService', functi
       }).then(function (response) {
         const id = response.data[0].id;
         const role = response.data[0].user_role;
-        console.log('in determineUser ' + id, role);
+        DataService.getData(id);
+        console.log('in determineUser ', id, role);
         self.determineRole(id, role);
       }).catch(function (error) {
        // console.log('Error getting data', error);
@@ -95,7 +97,7 @@ myApp.controller('LoginController', ['$http', '$location', 'UserService', functi
     } // end determineUser
 
     self.determineRole = function (id, role) {
-      console.log('in determineRole ' + id, role);
+      console.log('in determineRole ',id, role);
       if (role === 4) {
         $location.url('/super_AdminHome');
       } else if (role === 3) {
@@ -103,8 +105,7 @@ myApp.controller('LoginController', ['$http', '$location', 'UserService', functi
       } else if (role === 2) {
         $location.url('/coach_Home');
       } else if (role === 1) {
-        $location.url('/disclaimer');
-       // self.determineStudent(id, role);
+        $location.url('/dashboard');
       } else {
         self.message = "Something went wrong. Please try again."
         $location.url('/home');
