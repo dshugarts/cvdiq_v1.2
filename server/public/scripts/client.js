@@ -64,6 +64,15 @@ myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
         }
       }
     })
+    .when('/terms', {
+      templateUrl: '/views/templates/terms.html',
+      controller: 'SignupController as vm',
+      resolve: {
+        getuser : function(UserService){
+          return UserService.getParticipant();
+        }
+      }
+    })
     .when('/data', {
       templateUrl: '/views/templates/data.html',
       controller: 'DataController as vm',

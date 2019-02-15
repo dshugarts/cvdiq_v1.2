@@ -50,6 +50,7 @@ myApp.controller('LoginController', ['$http', '$location', 'UserService', functi
         $http.post('/api/user/register', self.user).then(function (response) {
         //  console.log('success');
         let user = self.user;
+        console.log('registerUser user = ' + user);
         self.newLogin(user);
         },
           function (response) {
@@ -60,14 +61,14 @@ myApp.controller('LoginController', ['$http', '$location', 'UserService', functi
     } // end registerUser
 
     self.newLogin = function (user) {
-      // console.log('sending to server...', user);
+       console.log('sending to server...', user);
        $http.post('/api/user/login', user).then(
          function (response) {
            if (response.status == 200) {
            //  console.log('success: ', response.data);
              // location works with SPA (ng-route)
              swal("Account successfully created!", "", "success")
-             $location.url('/update');
+             $location.url('/terms');
            } else {
            //  console.log('failure error: ', response);
              self.message = "Incorrect credentials. Please try again.";
