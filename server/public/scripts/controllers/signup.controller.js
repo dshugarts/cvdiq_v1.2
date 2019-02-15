@@ -6,6 +6,7 @@ myApp.controller('SignupController', ['$http', '$location', 'UserService', 'Sign
     self.userObject = UserService.userObject;
     self.id = UserService.userObject.id;
     self.letPass = SignupService.letPass;
+    self.addInfo = SignupService.addInfo;
 
     console.log('in signup controller id ' + self.id);
  

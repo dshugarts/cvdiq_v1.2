@@ -24,7 +24,24 @@ router.post('/', (request, response) => {
   }); // end POST
 
 
-
+  router.put('/info/:id', (request, response) => {
+    if (request.isAuthenticated()) {
+      const id = request.params.id;
+      const entry = request.body.entry;
+      console.log(entry);
+      let queryText = `UPDATE participant_info 
+        SET first_name=$2, last_name=$3, email=$4, date_of_birth=$5 WHERE id=$1`;
+      pool.query(queryText, [id, entry.first_name, entry.last_name, entry.email, entry.dob])
+        .then((result) => {
+          response.sendStatus(200);
+        })
+        .catch((err) => {
+          response.sendStatus(500);
+        })
+    } else {
+        response.sendStatus(403);
+    }
+  }); // end participant info update
 
 
 

@@ -73,6 +73,15 @@ myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
         }
       }
     })
+    .when('/general_info', {
+      templateUrl: '/views/templates/general_info.html',
+      controller: 'SignupController as vm',
+      resolve: {
+        getuser : function(UserService){
+          return UserService.getParticipant();
+        }
+      }
+    })
     .when('/data', {
       templateUrl: '/views/templates/data.html',
       controller: 'DataController as vm',

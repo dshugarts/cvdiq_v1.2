@@ -5,6 +5,29 @@ myApp.service('SignupService', ['$http', '$location', 'UserService', function ($
     self.userObject = UserService.userObject;
     id = UserService.userObject.id;
 
+    self.addInfo = function (info) {
+        console.log('addInfo = ', info, id);
+        const entry = {
+            id: id,
+            first_name: info.first_name,
+            last_name: info.last_name,
+            email: info.email,
+            dob: info.dob
+        }
+        $http({
+            method: 'PUT',
+            url: `/signup/info/${id}`,
+            data: {
+                entry: entry
+            }
+        }).then(function (response) {
+            swal("Account successfully created!", "", "success")
+            $location.path('/update');
+        }).catch(function (error) {
+         //   console.log('goals put error', error);
+        })
+    } // end addInfo
+
     self.letPass = function () {
         console.log('in Signup Service id = ', id);
         const disclaimer = true;
