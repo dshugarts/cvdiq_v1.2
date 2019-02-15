@@ -8,6 +8,6 @@ myApp.controller('SignupController', ['$http', '$location', 'UserService', 'Sign
     self.letPass = SignupService.letPass;
     self.addInfo = SignupService.addInfo;
 
-    console.log('in signup controller id ' + self.id);
+    console.log('in signup controller id ', self.id);
  
  }]);

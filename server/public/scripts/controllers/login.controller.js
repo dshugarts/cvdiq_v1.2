@@ -51,7 +51,7 @@ myApp.controller('LoginController', ['$http', '$location', 'UserService', 'DataS
         $http.post('/api/user/register', self.user).then(function (response) {
         //  console.log('success');
         let user = self.user;
-        console.log('registerUser user = ' + user);
+        console.log('registerUser user = ', user);
         self.newLogin(user);
         },
           function (response) {
