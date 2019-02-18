@@ -48,7 +48,7 @@
 - [ ] Fix date display on charts to remove time
 - [ ] Update value moved to detailed report?
 - [ ] Remove gender from form and into signup process
-- [ ] Remove Age from data form and automatically generate from signup dob
+- [ ] Remove DOB from general_info page and DBMS
 - [ ] Add account settings page on dashboard
 	- [ ] Change Password
 	- [ ] Source filestack
@@ -59,6 +59,8 @@
 - [ ] Update Disclaimer
 
 ## Echo
+- [ ] PDF Print Page of Detailed Report
+	- [ ] Progress Bar for Points Earned in PDF Report
 - [ ] Refactor to starrhealth when angular material
 - [ ] Switch to angular material
 - [ ] Register user page should look different than login
@@ -66,6 +68,7 @@
 
 ## Foxtrot
 - [ ] Mobile view detailed revision
+- [ ] DOB to general_info and create age automatically
 
 ## Golf
 - [ ] Apple Health Movement API Integration
