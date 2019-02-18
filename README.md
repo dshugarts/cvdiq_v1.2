@@ -56,6 +56,7 @@
 	- [ ] PDF Reporting
 - [ ] Refactor controllers and services
 - [ ] Remove console logs
+- [ ] Update Disclaimer
 
 ## Echo
 - [ ] Refactor to starrhealth when angular material
