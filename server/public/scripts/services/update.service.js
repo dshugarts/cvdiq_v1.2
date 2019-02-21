@@ -14,6 +14,19 @@ myApp.service('UpdateService', ['$http', '$location', 'DataService', function($h
         self.newEntry = {};
     }
 
+
+    self.toMiddle = function(id) {
+        $http({
+            method: 'GET',
+            url: `/signup/middle/${id}`
+          }).then(function(response){
+           console.log('MIDDLE', response.data);
+            self.toDashboard();
+          }).catch(function(error){
+           console.log('Error getting data', error);
+          })
+    }
+
     self.putData = function(entry) {
       //  console.log(entry);
         $http({
@@ -23,7 +36,7 @@ myApp.service('UpdateService', ['$http', '$location', 'DataService', function($h
         }).then(function(response) {
           //  console.log('Update response = ', response);
             self.getData(entry.id);
-            self.toDashboard();
+            self.toMiddle(entry.id);
         }).catch(function (error) {
           //  console.log('put error', error);
         })
