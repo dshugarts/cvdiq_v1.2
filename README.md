@@ -39,24 +39,16 @@
 	- [ ] all links in this table
 - [ ] Move enter new data link to dashboard and remove from toolbar
 - [ ] Move update data to detailed report as link or individually into table
+	- [ ] Remove Button from enter data page so you can only update from the new report page button
 
 ## Delta
 - [ ] Revised metrics
 	- [ ] more scoring levels
 	- [ ] points for improvement
 - [ ] Update metric algorithms to non-blood based and create separate blood-based form/report but without the score
-- [ ] Fix date display on charts to remove time
-- [ ] Update value moved to detailed report?
 - [ ] Remove gender from form and into signup process
 - [ ] Remove DOB from general_info page and DBMS
-- [ ] Add account settings page on dashboard
-	- [ ] Change Password
-	- [ ] Source filestack
-	- [ ] Add Photo
-	- [ ] PDF Reporting
-- [ ] Refactor controllers and services
-- [ ] Remove console logs
-- [ ] Update Disclaimer
+- [ ] Refactor controllers and services with new names
 
 ## Echo
 - [ ] PDF Print Page of Detailed Report
@@ -65,6 +57,14 @@
 - [ ] Switch to angular material
 - [ ] Register user page should look different than login
 - [ ] Change About page to mission, goals, etc..
+- [ ] Fix date display on charts to remove time
+- [ ] Add account settings page on dashboard
+	- [ ] Change Password
+	- [ ] Source filestack
+	- [ ] Add Photo
+	- [ ] PDF Reporting
+- [ ] Remove console logs
+- [ ] Update Disclaimer
 
 ## Foxtrot
 - [ ] Mobile view detailed revision
