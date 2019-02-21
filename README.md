@@ -21,8 +21,8 @@
 	- [x] email
 	- [x] disclaimer 
 	- [x] user rol
-- [ ] Fix score calculation/display timing
-	- [ ] After submitting data, route directly to dashboard
+- [x] Fix score calculation/display timing
+	- [x] After submitting data, route directly to dashboard
 	- [x] After login, route directly to dashboard
 - [x] After first login, direct to enter new data
 - [x] Add sweet alerts
