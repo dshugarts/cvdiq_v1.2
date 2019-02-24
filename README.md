@@ -20,7 +20,7 @@
 	- [x] update dbms to copy starr health
 	- [x] email
 	- [x] disclaimer 
-	- [x] user rol
+	- [x] user role
 - [x] Fix score calculation/display timing
 	- [x] After submitting data, route directly to dashboard
 	- [x] After login, route directly to dashboard
