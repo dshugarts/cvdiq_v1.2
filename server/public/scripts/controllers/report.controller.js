@@ -86,5 +86,11 @@ myApp.controller('ReportController', ['$http', '$location', 'UserService', 'Data
       $location.url('/modify');
   }
    
+  self.viewResources = function(){
+    $location.url('/resources');
+}
+
+
+
 
   }]); // end Report Controller
