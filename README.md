@@ -33,7 +33,6 @@
 - [x] Implement .env file for api keys
 
 ## Charlie
-- [ ] Instead of reports and suggestions in toolbar, have links on dashboard
 - [ ] Incorporate suggestions into detailed report table to combine the two pages
 	- [ ] show points earned
 	- [ ] all links in this table
