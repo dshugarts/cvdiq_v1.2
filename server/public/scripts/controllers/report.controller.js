@@ -82,6 +82,9 @@ myApp.controller('ReportController', ['$http', '$location', 'UserService', 'Data
       self.hi = true;
     }
 
+    self.updateData = function(){
+      $location.url('/modify');
+  }
    
 
   }]); // end Report Controller

@@ -1,4 +1,4 @@
-myApp.controller('UserController', ['UserService', 'DataService', function(UserService, DataService) {
+myApp.controller('UserController', ['$location', 'UserService', 'DataService', function($location, UserService, DataService) {
 //  console.log('UserController created');
   var self = this;
   self.userService = UserService;
@@ -10,7 +10,9 @@ myApp.controller('UserController', ['UserService', 'DataService', function(UserS
   self.myScore = DataService.myScore;
   self.pScore = DataService.pScore;
 
-
+  self.newData = function(){
+    $location.url('/update');
+}
  // self.getData(self.id);
   
  const sectors = [{

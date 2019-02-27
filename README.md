@@ -37,9 +37,9 @@
 - [ ] Incorporate suggestions into detailed report table to combine the two pages
 	- [ ] show points earned
 	- [ ] all links in this table
-- [ ] Move enter new data link to dashboard and remove from toolbar
-- [ ] Move update data to detailed report as link or individually into table
-	- [ ] Remove Button from enter data page so you can only update from the new report page button
+- [x] Move enter new data link to dashboard and remove from toolbar
+- [x] Move update data to detailed report as link or individually into table
+	- [x] Remove Button from enter data page so you can only update from the new report page button
 
 ## Delta
 - [ ] Revised metrics
