@@ -34,7 +34,7 @@
 
 ## Charlie
 - [x] Incorporate suggestions into detailed report table to combine the two pages
-	- [ ] show points earned
+	- [x] show points earned
 	- [x] all links in this table
 - [x] Move enter new data link to dashboard and remove from toolbar
 - [x] Move update data to detailed report as link or individually into table
