@@ -19,6 +19,7 @@ myApp.service('ScoringService', ['$http', '$location', function($http, $location
            } // end acsm score if
 
            scoredObject = {
+               id: id,
                acsm_value: newEntry.acsm_value,
                acsm_score: acsm_score
            } // end scoredObject
