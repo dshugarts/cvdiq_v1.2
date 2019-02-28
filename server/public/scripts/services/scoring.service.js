@@ -4,8 +4,26 @@ myApp.service('ScoringService', ['$http', '$location', function($http, $location
        self.newEntry = {};
        self.entryObject = {list: []};
 
-       self.packEntry = function(entry, id) {
-           console.log('id = ', id, 'entry = ', entry);
+       self.postEntry = function(entry) {
+           console.log('postEntry = ', entry);
+       } // end postEntry
+
+       self.packEntry = function(newEntry, id) {
+           console.log('id = ', id, 'entry = ', newEntry);
+
+           let acsm_score = 0;
+           if (newEntry.acsm_value === "No") {
+               acsm_score = 2;
+           } else {
+               acsm_score = 0;
+           } // end acsm score if
+
+           scoredObject = {
+               acsm_value: newEntry.acsm_value,
+               acsm_score: acsm_score
+           } // end scoredObject
+
+           self.postEntry(scoredObject);
        } // end packEntry
 
 
