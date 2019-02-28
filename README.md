@@ -45,10 +45,12 @@
 	- [ ] map out new matrix for confirmation
 	- [ ] code new matrix and push for testing
 - [x] Remove DOB from general_info page and DBMS
+- [ ] Update scoreChart to new metrics
 
 ## Echo
 - [ ] PDF Print Page of Detailed Report
 	- [ ] Progress Bar for Points Earned in PDF Report
+	- [x] Source filestack
 - [ ] Change About page to mission, goals, etc.. (and hide it)
 - [ ] Add copy to homepage
 - [ ] Remove console logs
@@ -65,7 +67,6 @@
 	- [ ] Dynamic report table with button for suggestions only if value yellow or red
 - [ ] Add account settings page on dashboard
 	- [ ] Change Password
-	- [ ] Source filestack
 	- [ ] Add Photo
 	- [ ] PDF Reporting
 - [ ] Fix date display on charts to remove time
