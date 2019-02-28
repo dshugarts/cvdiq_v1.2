@@ -5,4 +5,4 @@ node_modules/
 *.logs
 .vscode/
 .env
-dbms_setup.sql
+test_1.sql
