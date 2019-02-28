@@ -44,18 +44,13 @@
 - [ ] Revised metrics
 	- [ ] more scoring levels
 	- [ ] points for improvement
-- [ ] Update metric algorithms to non-blood based and create separate blood-based form/report but without the score
-- [ ] Remove gender from form and into signup process
-- [ ] Remove DOB from general_info page and DBMS
-- [ ] Refactor controllers and services with new names
+- [x] Remove DOB from general_info page and DBMS
 
 ## Echo
 - [ ] PDF Print Page of Detailed Report
 	- [ ] Progress Bar for Points Earned in PDF Report
-- [ ] Refactor to starrhealth when angular material
-- [ ] Switch to angular material
-- [ ] Register user page should look different than login
-- [ ] Change About page to mission, goals, etc..
+- [ ] Change About page to mission, goals, etc.. (and hide it)
+- [ ] Add copy to homepage
 - [ ] Fix date display on charts to remove time
 - [ ] Add account settings page on dashboard
 	- [ ] Change Password
@@ -64,11 +59,23 @@
 	- [ ] PDF Reporting
 - [ ] Remove console logs
 - [ ] Update Disclaimer
-_ [ ] Dynamic report table with button for suggestions only if value yellow or red
+- [ ] Add copy to homepage
+- [ ] Register user page should look different than login (instructions, dual password, etc)
+
 
 ## Foxtrot
-- [ ] Mobile view detailed revision
-- [ ] DOB to general_info and create age automatically
+- [ ] Refactor controllers and services with new names
+- [ ] Admin User Role
+	- [ ] Admin Dashboard View
+- [ ] Admin Reporting
+	- [ ] Dynamic report table with button for suggestions only if value yellow or red
 
 ## Golf
+- [ ] Switch to angular material
+- [ ] Refactor to starrhealth when angular material
+- [ ] Mobile view detailed revision
+- [ ] DOB to general_info and create age automatically
+- [ ] Remove gender from form and into signup process
+
+## Hotel
 - [ ] Apple Health Movement API Integration

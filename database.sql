@@ -52,4 +52,14 @@ CREATE TABLE resources (
     resource_id serial primary key,
     category_id INT REFERENCES categories ON DELETE CASCADE,
     resource_info varchar(255)
+
+CREATE TABLE participant_info ( 
+     participant_id SERIAL PRIMARY KEY, 
+     id INT REFERENCES users ON DELETE CASCADE NOT NULL, 
+     disclaimer BOOLEAN, 
+     first_name CHAR(25), 
+     last_name CHAR(30),
+     email VARCHAR(60)
+
+
 );

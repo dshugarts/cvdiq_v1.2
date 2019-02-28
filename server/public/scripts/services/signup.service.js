@@ -11,8 +11,7 @@ myApp.service('SignupService', ['$http', '$location', 'UserService', function ($
             id: id,
             first_name: info.first_name,
             last_name: info.last_name,
-            email: info.email,
-            dob: info.dob
+            email: info.email
         }
         $http({
             method: 'PUT',

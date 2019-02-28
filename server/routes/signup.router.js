@@ -30,8 +30,8 @@ router.post('/', (request, response) => {
       const entry = request.body.entry;
       console.log(entry);
       let queryText = `UPDATE participant_info 
-        SET first_name=$2, last_name=$3, email=$4, date_of_birth=$5 WHERE id=$1`;
-      pool.query(queryText, [id, entry.first_name, entry.last_name, entry.email, entry.dob])
+        SET first_name=$2, last_name=$3, email=$4 WHERE id=$1`;
+      pool.query(queryText, [id, entry.first_name, entry.last_name, entry.email])
         .then((result) => {
           response.sendStatus(200);
         })
