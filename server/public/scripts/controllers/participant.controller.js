@@ -7,11 +7,11 @@ myApp.controller('ParticipantController', ['$http', '$location', 'UserService', 
       self.newEntry = ScoringService.newEntry;
       self.entryObject = ScoringService.entryObject;
       self.id = UserService.userObject.id;
-      self.addEntry = ScoringService.addEntry;
+      self.packEntry = ScoringService.packEntry;
   
   
-      self.dataView = function() {
-        $location.url('/data');
+      self.dashView = function() {
+        $location.url('/dashboard');
       }
   
     }]);

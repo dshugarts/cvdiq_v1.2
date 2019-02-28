@@ -4,7 +4,9 @@ myApp.service('ScoringService', ['$http', '$location', function($http, $location
        self.newEntry = {};
        self.entryObject = {list: []};
 
-
+       self.packEntry = function(entry, id) {
+           console.log('id = ', id, 'entry = ', entry);
+       } // end packEntry
 
 
 
