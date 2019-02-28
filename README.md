@@ -42,8 +42,8 @@
 
 ## Delta
 - [ ] Revised metrics
-	- [ ] more scoring levels
-	- [ ] points for improvement
+	- [ ] map out new matrix for confirmation
+	- [ ] code new matrix and push for testing
 - [x] Remove DOB from general_info page and DBMS
 
 ## Echo
