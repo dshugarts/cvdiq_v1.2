@@ -51,12 +51,6 @@
 	- [ ] Progress Bar for Points Earned in PDF Report
 - [ ] Change About page to mission, goals, etc.. (and hide it)
 - [ ] Add copy to homepage
-- [ ] Fix date display on charts to remove time
-- [ ] Add account settings page on dashboard
-	- [ ] Change Password
-	- [ ] Source filestack
-	- [ ] Add Photo
-	- [ ] PDF Reporting
 - [ ] Remove console logs
 - [ ] Update Disclaimer
 - [ ] Add copy to homepage
@@ -69,6 +63,12 @@
 	- [ ] Admin Dashboard View
 - [ ] Admin Reporting
 	- [ ] Dynamic report table with button for suggestions only if value yellow or red
+- [ ] Add account settings page on dashboard
+	- [ ] Change Password
+	- [ ] Source filestack
+	- [ ] Add Photo
+	- [ ] PDF Reporting
+- [ ] Fix date display on charts to remove time
 
 ## Golf
 - [ ] Switch to angular material

@@ -5,6 +5,9 @@ const bodyParser = require('body-parser');
 const passport = require('./strategies/sql.localstrategy');
 const sessionConfig = require('./modules/session-middleware');
 
+let env = require('dotenv');
+env.config();
+
 // Route includes
 const userRouter = require('./routes/user.router');
 const dataRouter = require('./routes/data.router');
@@ -14,6 +17,12 @@ const signupRouter = require('./routes/signup.router');
 // Body parser middleware
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
+
+// Filestack Key Call
+const FILESTACK_KEY = process.env.FILESTACK_KEY;
+app.get('/filestack-key', (req, res) => {
+    res.send(FILESTACK_KEY);
+})
 
 // Passport Session Configuration
 app.use(sessionConfig);
