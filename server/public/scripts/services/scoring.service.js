@@ -3,6 +3,26 @@ myApp.service('ScoringService', ['$http', '$location', function($http, $location
        var self = this;
        self.newEntry = {};
        self.entryObject = {list: []};
+       self.dataArray = [];
+       self.myScore = '';
+
+       self.toDashboard = function() {
+        swal("Data successfully entered!", "", "success")
+        $location.url('/dashboard');
+        self.newEntry = {};
+    }
+
+       self.toMiddle = function(id) {
+        $http({
+            method: 'GET',
+            url: `/signup/middle/${id}`
+          }).then(function(response){
+           console.log('MIDDLE', response.data);
+            self.toDashboard();
+          }).catch(function(error){
+           console.log('Error getting data', error);
+          })
+    }
 
        self.postEntry = function(entry) {
         console.log("postENTRY = ", entry);
@@ -12,12 +32,36 @@ myApp.service('ScoringService', ['$http', '$location', function($http, $location
               data: {entry: entry}
           }).then(function (response) {
               console.log('post post', response, entry.id);
-           //   self.getData(entry.id);
-            //  self.toMiddle(entry.id);
+              self.getData(entry.id);
+              self.toMiddle(entry.id);
           }).catch(function (error) {
            //   console.log('post error', error);
           })
       } // end postEntry
+
+      self.getData = function(id){
+        console.log('HHHHH', id);
+        $http({
+          method: 'GET',
+          url: `/scoring/${id}`
+        }).then(function(response){
+        console.log('response', response.data);
+        self.dataArray = response.data;
+        console.log('DATA ARRAY', self.dataArray.length);
+        if (self.dataArray.length === 0) {
+            self.myScore = 0;
+            console.log('TEST 1 ', self.myScore);
+        } else {
+            self.myScore = self.dataArray[0].well_score;
+            console.log('TEST 2 ',  self.myScore);
+          }
+          console.log('DS myScore ', self.myScore);
+        //  self.getAllReportData(self.dataArray);
+        //  self.getAllResourceData(self.dataArray);
+        }).catch(function(error){
+         console.log('Error getting data', error);
+        })
+      } //end getData
 
        self.packEntry = function(newEntry, id) {
            console.log('id = ', id, 'entry = ', newEntry);

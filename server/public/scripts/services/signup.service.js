@@ -21,7 +21,7 @@ myApp.service('SignupService', ['$http', '$location', 'UserService', function ($
             }
         }).then(function (response) {
             swal("Account successfully created!", "", "success")
-            $location.path('/update');
+            $location.path('/data_entry');
         }).catch(function (error) {
          //   console.log('goals put error', error);
         })

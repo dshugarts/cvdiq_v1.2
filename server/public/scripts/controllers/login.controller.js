@@ -1,7 +1,8 @@
-myApp.controller('LoginController', ['$http', '$location', 'UserService', 'DataService', function($http, $location, UserService, DataService) {
+myApp.controller('LoginController', ['$http', '$location', 'UserService', 'DataService', 'ScoringService', function($http, $location, UserService, DataService, ScoringService) {
     // console.log('LoginController created');
     var self = this;
     self.dataService = DataService;
+    self.ScoringService = ScoringService;
     self.user = {
       username: '',
       password: '',
@@ -88,7 +89,7 @@ myApp.controller('LoginController', ['$http', '$location', 'UserService', 'DataS
       }).then(function (response) {
         const id = response.data[0].id;
         const role = response.data[0].user_role;
-        DataService.getData(id);
+        ScoringService.getData(id);
         console.log('in determineUser ', id, role);
         self.determineRole(id, role);
       }).catch(function (error) {

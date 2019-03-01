@@ -24,7 +24,24 @@ router.post('/', (request, response) => {
   }); // end POST
 
 
-
+  router.get('/:id', (request, response) => {
+    if (request.isAuthenticated()) {
+    const id = request.params.id;
+    console.log('ID EQUALS ' + id);
+    const sqlText = `SELECT * FROM new_data WHERE id=$1 ORDER BY entry_id DESC LIMIT 1`;
+    pool.query(sqlText, [id])
+      .then(function(result) {
+      //  console.log('Get result:', result);
+        response.send(result.rows);
+      })
+      .catch(function(error){
+      //  console.log('Error on Get:', error);
+        response.sendStatus(500);
+      })
+    } else {
+      response.sendStatus(403);
+  }
+  }); // end get
 
 
 
