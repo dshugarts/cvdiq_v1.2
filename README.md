@@ -42,10 +42,13 @@
 
 ## Delta
 - [ ] Revised metrics
-	- [ ] map out new matrix for confirmation
+	- [x] map out new matrix for confirmation
+	- [x] finish scoring algorithm
+	- [ ] update dbms to reflect a new table and post correctly
+	- [ ] update gauge and reporting to reflect new data
 	- [ ] code new matrix and push for testing
+	- [ ] Update scoreChart to new metrics
 - [x] Remove DOB from general_info page and DBMS
-- [ ] Update scoreChart to new metrics
 
 ## Echo
 - [ ] PDF Print Page of Detailed Report
