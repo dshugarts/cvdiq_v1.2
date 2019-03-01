@@ -225,7 +225,7 @@ myApp.service('DataService', ['$http', '$location', function($http, $location){
     if (newEntry.nicotine_value === "false") {
         nicotine_score = 2;
     } else {
-        nicotine_value = 0;
+        nicotine_score = 0;
     } // end nicotine if
    
     let sleep_score = 0;
