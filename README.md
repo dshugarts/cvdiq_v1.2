@@ -45,7 +45,9 @@
 	- [x] map out new matrix for confirmation
 	- [x] finish scoring algorithm
 	- [x] update dbms to reflect a new table and post correctly
-	- [ ] update gauge and reporting to reflect new data
+	- [x] update gauge and reporting to reflect new data
+	- [ ] implement update existing data for new metrics
+	- [ ] update report and suggestions to reflect new data
 	- [ ] code new matrix and push for testing
 	- [ ] Update scoreChart to new metrics
 - [x] Remove DOB from general_info page and DBMS
