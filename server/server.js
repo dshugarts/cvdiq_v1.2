@@ -13,6 +13,7 @@ const userRouter = require('./routes/user.router');
 const dataRouter = require('./routes/data.router');
 const pathRouter = require('./routes/path.router');
 const signupRouter = require('./routes/signup.router');
+const scoringRouter = require('./routes/scoring.router');
 
 // Body parser middleware
 app.use(bodyParser.json());
@@ -36,6 +37,7 @@ app.use('/api/user', userRouter);
 app.use('/data', dataRouter);
 app.use('/path', pathRouter);
 app.use('/signup', signupRouter);
+app.use('/scoring', scoringRouter);
 
 // Serve static files
 app.use(express.static('server/public'));

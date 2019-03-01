@@ -44,7 +44,7 @@
 - [ ] Revised metrics
 	- [x] map out new matrix for confirmation
 	- [x] finish scoring algorithm
-	- [ ] update dbms to reflect a new table and post correctly
+	- [x] update dbms to reflect a new table and post correctly
 	- [ ] update gauge and reporting to reflect new data
 	- [ ] code new matrix and push for testing
 	- [ ] Update scoreChart to new metrics

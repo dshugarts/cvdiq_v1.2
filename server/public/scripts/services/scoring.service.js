@@ -5,8 +5,19 @@ myApp.service('ScoringService', ['$http', '$location', function($http, $location
        self.entryObject = {list: []};
 
        self.postEntry = function(entry) {
-           console.log('postEntry = ', entry);
-       } // end postEntry
+        console.log("postENTRY = ", entry);
+          $http({
+              method: 'POST',
+              url: '/scoring',
+              data: {entry: entry}
+          }).then(function (response) {
+              console.log('post post', response, entry.id);
+           //   self.getData(entry.id);
+            //  self.toMiddle(entry.id);
+          }).catch(function (error) {
+           //   console.log('post error', error);
+          })
+      } // end postEntry
 
        self.packEntry = function(newEntry, id) {
            console.log('id = ', id, 'entry = ', newEntry);
