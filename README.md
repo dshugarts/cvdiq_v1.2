@@ -48,6 +48,7 @@
 	- [x] update gauge and reporting to reflect new data
 	- [ ] implement update existing data for new metrics
 	- [ ] update report and suggestions to reflect new data
+	 - [ ] update dbms for these tables
 	- [ ] code new matrix and push for testing
 	- [ ] Update scoreChart to new metrics
 - [x] Remove DOB from general_info page and DBMS
@@ -58,10 +59,15 @@
 	- [x] Source filestack
 - [ ] Change About page to mission, goals, etc.. (and hide it)
 - [ ] Add copy to homepage
-- [ ] Remove console logs
 - [ ] Update Disclaimer
 - [ ] Add copy to homepage
 - [ ] Register user page should look different than login (instructions, dual password, etc)
+- [ ] Update all copy from Daniel
+- [ ] Remove console logs
+- [ ] Alpha Testing
+- [ ] Final Deploy
+- [ ] Beta Testing
+
 
 
 ## Foxtrot
