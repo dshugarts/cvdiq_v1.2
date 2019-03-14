@@ -46,10 +46,9 @@
 	- [x] finish scoring algorithm
 	- [x] update dbms to reflect a new table and post correctly
 	- [x] update gauge and reporting to reflect new data
-	- [ ] implement update existing data for new metrics
-	- [ ] update report and suggestions to reflect new data
-	 - [ ] update dbms for these tables
-	- [ ] code new matrix and push for testing
+	- [x] implement update existing data for new metrics
+	- [x] update report and suggestions to reflect new data
+	- [x] code new matrix and push for testing
 	- [ ] Update scoreChart to new metrics
 - [x] Remove DOB from general_info page and DBMS
 
@@ -60,12 +59,15 @@
 - [ ] Change About page to mission, goals, etc.. (and hide it)
 - [ ] Add copy to homepage
 - [ ] Update Disclaimer
+- [ ] Report Charts need to go to correct charts for new metrics
+- [ ] Refactor stress dispaly in report to include management of stress
 - [ ] Change Radio button displays on modify_entry page
 	- [ ] Change DBMS from boolean to string
 - [ ] Fix loss of data on page refresh (call dataArray in controller??)
 - [ ] Fix route timing
 - [ ] Register user page should look different than login (instructions, dual password, etc)
 - [ ] Update all copy from Daniel
+ - [ ] Update DBMS Report Data
 - [ ] Remove console logs
 - [ ] Alpha Testing
 - [ ] Final Deploy

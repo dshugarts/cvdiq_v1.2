@@ -1,34 +1,37 @@
 <div ng-include="'views/partials/nav.html'"></div>
 
 <div class="container">
-        <h2>My Healthy Heart Results</h2>
-        <div class="col-md-8">
-                <button ng-click="vm.updateData()" class="btn btn-primary">Update Last Data Entry</button>
-                <button ng-click="vm.viewResources()" class="btn btn-info">View My Suggestions</button>
-            </div>
-</br>
-</br>
-</br>
+        <h2>My Wellness Score</h2>
     <table class="table">
             <thead>
               <tr>
                 <th>Metric</th>
                 <th>Value</th>
+                <th>Maximum Wellness Points</th>
                 <th>Risk Level</th>
                 <th>More Info</th>
                 <th>Chart</th>
               </tr>
             </thead>
             <tbody ng-repeat="data in vm.dataArray">
-            <tr class={{vm.hhsClass}}>
-                <td>Healthy Heart Score:</td>
-                <td>{{data.cvd_score}}</td>
-                <td>{{vm.cvdRisk}}</td>
+            <tr class={{vm.wellClass}}>
+                <td>Wellness Score:</td>
+                <td>{{data.well_score}}</td>
+                <td>100</td>
+                <td>{{vm.wellRisk}}</td>
                 <td><button ng-click="vm.goHhsReport()" class="btn btn-success">More Info</button></td>
                 <td><button ng-click="vm.getHeartHealthData(vm.id)" class="btn btn-primary">Chart</button></td>
             </tr>
 </tbody>
 </table>
+</br>
+<div class="col-md-8">
+        <button ng-click="vm.updateData()" class="btn btn-primary">Update Last Data Entry</button>
+        <button ng-click="vm.viewResources()" class="btn btn-info">View My Suggestions</button>
+    </div>
+</br>
+</br>
+</br>
 </div>
 </br>
 </br>
@@ -50,7 +53,7 @@
             <tr class={{vm.ageClass}}>
                 <td><strong>Age:</strong></td>
                 <td>{{data.age_value}}</td>
-                <td>{{data.age_score}}/2</td>
+                <td>{{data.age_score}}/5</td>
                 <td>{{vm.ageRisk}}</td>
                 <td><button ng-click="vm.goAgeReport()" class="btn btn-success">More Info</button></td>
                 <td></td>
@@ -58,39 +61,39 @@
             <tr class={{vm.bpClass}}>
                 <td><strong>Blood Pressure:</strong></td>
                     <td>{{data.systolic_value}}/{{data.diastolic_value}}</td>
-                    <td>{{data.bp_score}}/2</td>
+                    <td>{{data.bp_score}}/12</td>
                     <td>{{vm.bpRisk}}</td>
                     <td><button ng-click="vm.goBpReport()" class="btn btn-success">More Info</button></td>
                     <td><button ng-click="vm.getBpData(vm.id)" class="btn btn-primary">Chart</button></td>
             </tr>
-            <tr class={{vm.ldlClass}}>
-                    <td><strong>LDL:</strong></td>
-                    <td>{{data.ldl_value}}</td>
-                    <td>{{data.ldl_score}}/2</td>
-                    <td>{{vm.ldlRisk}}</td>
+            <tr class={{vm.stressClass}}>
+                    <td><strong>Total Stress:</strong></td>
+                    <td>{{vm.stressDisplay}}</td>
+                    <td>{{data.stress_score}}/12</td>
+                    <td>{{vm.stressRisk}}</td>
                     <td><button ng-click="vm.goLdlReport()" class="btn btn-success">More Info</button></td>
                     <td><button ng-click="vm.getLdlData(vm.id)" class="btn btn-primary">Chart</button></td>
             </tr>
-            <tr class={{vm.hdlClass}}>
-                    <td><strong>HDL:</strong></td>
-                    <td>{{data.hdl_value}}</td>
-                    <td>{{data.hdl_score}}/2</td>
-                    <td>{{vm.hdlRisk}}</td>
+            <tr class={{vm.inactivityClass}}>
+                    <td><strong>Physical Inactivity:</strong></td>
+                    <td>{{data.inactivity_value}}</td>
+                    <td>{{data.inactivity_score}}/12</td>
+                    <td>{{vm.inactivityRisk}}</td>
                     <td><button ng-click="vm.goHdlReport()" class="btn btn-success">More Info</button></td>
                     <td><button ng-click="vm.getHdlData(vm.id)" class="btn btn-primary">Chart</button></td>
             </tr>
-            <tr class={{vm.gluClass}}>
-                <td><strong>Glucose:</strong></td>
-                <td>{{data.glu_value}}</td>
-                <td>{{data.glu_score}}/2</td>
-                <td>{{vm.gluRisk}}</td>
+            <tr class={{vm.acsmClass}}>
+                <td><strong>ACSM Risk Questions:</strong></td>
+                <td>{{data.acsm_value}}</td>
+                <td>{{data.acsm_score}}/10</td>
+                <td>{{vm.acsmRisk}}</td>
                 <td><button ng-click="vm.goGluReport()" class="btn btn-success">More Info</button></td>
                 <td><button ng-click="vm.getGluData(vm.id)" class="btn btn-primary">Chart</button></td>
             </tr>
             <tr class={{vm.waistClass}}>
                     <td><strong>Waist Size (in.):</strong></td>
                     <td>{{data.waist_value}}</td>
-                    <td>{{data.waist_score}}/2</td>
+                    <td>{{data.waist_score}}/10</td>
                     <td>{{vm.waistRisk}}</td>
                     <td><button ng-click="vm.goWaistReport()" class="btn btn-success">More Info</button></td>
                     <td><button ng-click="vm.getWaistData(vm.id)" class="btn btn-primary">Chart</button></td>
@@ -98,7 +101,7 @@
             <tr class={{vm.historyClass}}>
                     <td><strong>Family History:</strong></td>
                     <td>{{vm.historyDisplay}}</td>
-                    <td>{{data.family_history_score}}/2</td>
+                    <td>{{data.family_history_score}}/5</td>
                     <td>{{vm.historyRisk}}</td>
                     <td><button ng-click="vm.goHistoryReport()" class="btn btn-success">More Info</button></td>
                     <td></td>
@@ -106,7 +109,7 @@
             <tr class={{vm.activityClass}}>
                     <td><strong>Physical Activity:</strong></td>
                     <td>{{data.physical_activity_value}}</td>
-                    <td>{{data.physical_activity_score}}/2</td>
+                    <td>{{data.physical_activity_score}}/16</td>
                     <td>{{vm.activityRisk}}</td>
                     <td><button ng-click="vm.goActivityReport()" class="btn btn-success">More Info</button></td>
                     <td><button ng-click="vm.getActivityData(vm.id)" class="btn btn-primary">Chart</button></td>
@@ -114,7 +117,7 @@
             <tr class={{vm.nicotineClass}}>
                     <td><strong>Nicotine Use:</strong></td>
                     <td>{{vm.nicotineDisplay}}</td>
-                    <td>{{data.nicotine_score}}/2</td>
+                    <td>{{data.nicotine_score}}/12</td>
                     <td>{{vm.nicotineRisk}}</td>
                     <td><button ng-click="vm.goNicotineReport()" class="btn btn-success">More Info</button></td>
                     <td></td>
@@ -122,19 +125,11 @@
             <tr class={{vm.sleepClass}}>
                     <td><strong>Sleep (hrs/night):</strong></td>
                     <td>{{data.sleep_value}}</td>
-                    <td>{{data.sleep_score}}/2</td>
+                    <td>{{data.sleep_score}}/10</td>
                     <td>{{vm.sleepRisk}}</td>
                     <td><button ng-click="vm.goSleepReport()" class="btn btn-success">More Info</button></td>
                     <td><button ng-click="vm.getSleepData(vm.id)" class="btn btn-primary">Chart</button></td>
             </tr>
-            <tr class={{vm.trgClass}}>
-                    <td><strong>Triglycerides:</strong></td>
-                    <td>{{data.trg_value}}</td>
-                    <td>Not Scored</td>
-                    <td>{{vm.trgRisk}}</td>
-                    <td><button ng-click="vm.goTrgReport()" class="btn btn-success">More Info</button></td>
-                    <td><button ng-click="vm.getTrgData(vm.id)" class="btn btn-primary">Chart</button></td>
-            </tr> 
             <tr class="bg-success">
                     <td><strong>Weight:</strong></td>
                     <td>{{data.weight_value}}</td>
