@@ -59,6 +59,7 @@
 - [ ] Change About page to mission, goals, etc.. (and hide it)
 - [ ] Add copy to homepage
 - [ ] Update Disclaimer
+- [ ] resources into report table
 - [ ] Report Charts need to go to correct charts for new metrics
 - [ ] Refactor stress dispaly in report to include management of stress
 - [ ] Change Radio button displays on modify_entry page
