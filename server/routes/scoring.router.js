@@ -44,6 +44,24 @@ router.post('/', (request, response) => {
   }); // end get
 
 
+  router.put('/update/:id', (request, response) => {
+    if (request.isAuthenticated()) {
+    const id = request.params.id;
+    console.log('in update rpouter', id);
+    const entry = request.body.entry;
+    let queryText = `UPDATE new_data SET age_value=$2, family_history_value=$3, physical_activity_value=$4, systolic_value=$5, diastolic_value=$6, nicotine_value=$7, acsm_value=$8, total_stress_value=$9, stress_management_value=$10, inactivity_value=$11, waist_value=$12, sleep_value=$13, height_value=$14, weight_value=$15, gender=$16, age_score=$17, physical_activity_score=$18, family_history_score=$19, bp_score=$20, nicotine_score=$21, acsm_score=$22, stress_score=$23, inactivity_score=$24, waist_score=$25, sleep_score=$26, well_score=$27, data_date=$28 WHERE entry_id=$1`;
+    pool.query(queryText, [id, entry.age_value, entry.family_history_value, entry.physical_activity_value, entry.systolic_value, entry.diastolic_value, entry.nicotine_value, entry.acsm_value, entry.total_stress_value, entry.stress_management_value, entry.inactivity_value, entry.waist_value, entry.sleep_value, entry.height_value, entry.weight_value, entry.gender, entry.age_score, entry.physical_activity_score, entry.family_history_score, entry.bp_score, entry.nicotine_score, entry.acsm_score, entry.stress_score, entry.inactivity_score, entry.waist_score, entry.sleep_score, entry.well_score, entry.data_date])
+      .then((result) => {
+        response.sendStatus(200);
+      })
+      .catch((err) => {
+        response.sendStatus(500);
+      })
+    } else {
+      response.sendStatus(403);
+    }
+  }); // end update values
+
 
 
 

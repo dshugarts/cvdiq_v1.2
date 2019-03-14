@@ -33,6 +33,15 @@ myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
         }
       }
     })
+    .when('/modify_entry', {
+      templateUrl: '/views/templates/modify_entry.html',
+      controller: 'ReportController as vm',
+      resolve: {
+        getuser : function(UserService){
+          return UserService.getParticipant();
+        }
+      }
+    })
     .when('/update', {
       templateUrl: '/views/templates/update.html',
       controller: 'UpdateController as vm',

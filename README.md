@@ -60,7 +60,10 @@
 - [ ] Change About page to mission, goals, etc.. (and hide it)
 - [ ] Add copy to homepage
 - [ ] Update Disclaimer
-- [ ] Add copy to homepage
+- [ ] Change Radio button displays on modify_entry page
+	- [ ] Change DBMS from boolean to string
+- [ ] Fix loss of data on page refresh (call dataArray in controller??)
+- [ ] Fix route timing
 - [ ] Register user page should look different than login (instructions, dual password, etc)
 - [ ] Update all copy from Daniel
 - [ ] Remove console logs

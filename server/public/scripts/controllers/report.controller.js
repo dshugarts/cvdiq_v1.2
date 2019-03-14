@@ -1,4 +1,4 @@
-myApp.controller('ReportController', ['$http', '$location', 'UserService', 'DataService', 'PostDataService', function($http, $location, UserService, DataService, PostDataService) {
+myApp.controller('ReportController', ['$http', '$location', 'UserService', 'DataService', 'PostDataService', 'ScoringService', 'UpdateService', function($http, $location, UserService, DataService, PostDataService, ScoringService, UpdateService) {
   //  console.log('ReportController created');
     var self = this;
     self.userService = UserService;
@@ -16,7 +16,7 @@ myApp.controller('ReportController', ['$http', '$location', 'UserService', 'Data
     self.getBpData = PostDataService.getBpData;
     self.getbmiData = PostDataService.getbmiData;
     self.userObject = UserService.userObject;
-    self.dataArray = DataService.dataArray;
+    self.dataArray = ScoringService.dataArray;
     self.getData = DataService.getData;
     self.id = UserService.userObject.id;
     self.getAllReportData = DataService.getAllReportData;
@@ -77,13 +77,35 @@ myApp.controller('ReportController', ['$http', '$location', 'UserService', 'Data
     self.bmiClass = DataService.bmiClass;
     self.trgClass = DataService.trgClass;
     self.hhsClass = DataService.hhsClass;
+    self.newNicotine = self.dataArray[0].nicotine_value.toString();
+    self.newStress = self.dataArray[0].total_stress_value.toString();
+    self.newHistory = self.dataArray[0].family_history_value.toString();
+
+    console.log(self.dataArray);
+
+
+    self.dashView = function() {
+      $location.url('/dashboard');
+    }
+
+    self.reportView = function() {
+      $location.url('/report');
+    }
+
+    self.editData = function(data){
+      data.editing = true;
+    }
+
+    self.cancelUpdate = function(data){
+      data.editing = false;
+    }
     
     self.goAgeInfo = function() {
       self.hi = true;
     }
 
     self.updateData = function(){
-      $location.url('/modify');
+      $location.url('/modify_entry');
   }
    
   self.viewResources = function(){
@@ -91,6 +113,32 @@ myApp.controller('ReportController', ['$http', '$location', 'UserService', 'Data
 }
 
 
+self.saveData = function(data, nic, his){
+  //  console.log('PUT DATA', data, nic, his);
+
+    updateObject = {
+        entry_id: data.entry_id,
+        id: data.id,
+        data_date: data.data_date,
+        age_value: data.age_value,
+        family_history_value: self.newHistory,
+        physical_activity_value: data.physical_activity_value,
+        systolic_value: data.systolic_value,
+        diastolic_value: data.diastolic_value,
+        nicotine_value: self.newNicotine,
+        inactivity_value: data.inactivity_value,
+        acsm_value: data.acsm_value,
+        total_stress_value: self.newStress,
+        stress_management_value: data.stress_management_value,
+        waist_value: data.waist_value,
+        sleep_value: data.sleep_value,
+        height_value: data.height_value,
+        weight_value: data.weight_value,
+        gender: data.gender
+    }
+  //  console.log('updateObject', updateObject);
+    UpdateService.packEntry(updateObject);
+  } // end saveData
 
 
   }]); // end Report Controller

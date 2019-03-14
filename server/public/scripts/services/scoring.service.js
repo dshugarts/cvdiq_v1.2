@@ -22,7 +22,7 @@ myApp.service('ScoringService', ['$http', '$location', function($http, $location
           }).catch(function(error){
            console.log('Error getting data', error);
           })
-    }
+    } // end toMiddle
 
        self.postEntry = function(entry) {
         console.log("postENTRY = ", entry);

@@ -1,8 +1,8 @@
-myApp.service('UpdateService', ['$http', '$location', 'DataService', function($http, $location, DataService){
+myApp.service('UpdateService', ['$http', '$location', 'ScoringService', function($http, $location, ScoringService){
 //    console.log('UpdateService Loaded');
     var self = this;
-    self.dataService = DataService;
-    self.getData = DataService.getData;
+    self.scoringService = ScoringService;
+    self.getData = ScoringService.getData;
     self.newEntry = {};
     self.entryObject = {};
 
@@ -31,7 +31,7 @@ myApp.service('UpdateService', ['$http', '$location', 'DataService', function($h
       //  console.log(entry);
         $http({
             method: 'PUT',
-            url: `/data/update/${entry.entry_id}`,
+            url: `/scoring/update/${entry.entry_id}`,
             data: {entry: entry}
         }).then(function(response) {
           //  console.log('Update response = ', response);
@@ -43,138 +43,153 @@ myApp.service('UpdateService', ['$http', '$location', 'DataService', function($h
     } // end putData
 
 
-    self.scoreData = function(newEntry) {
-      //  console.log('updateObject = ', newEntry);
-        let glu_score = 0;
-        if (newEntry.glu_value >= 100 && newEntry.glu_value < 126) {
-            glu_score = 1;
-        } else if (newEntry.glu_value < 100) {
-            glu_score = 2;
-        } else {
-            glu_score = 0;
-        } // end glu score if
-        
+    self.packEntry = function(newEntry) {
+
         let nicotine_score = 0;
         if (newEntry.nicotine_value === "false") {
-            nicotine_score = 2;
+            nicotine_score = 10;
         } else {
-            nicotine_value = 0;
-        } // end nicotine if
-       
-        let sleep_score = 0;
-        if (newEntry.sleep_value >= 7) {
-            sleep_score = 2;
-        } else {
-            sleep_score = 0;
-        } // end sleep if
-    
-        let family_history_score = 0;
-        if (newEntry.family_history_value === "false") {
-            family_history_score = 2;
-        } else {
-            family_history_score = 0;
-        } // end family history if
-    
-        let bp_score = 0;
-        if ((newEntry.systolic_value < 180 && newEntry.systolic_value > 130) || (newEntry.diastolic_value <120 && newEntry.diastolic_value > 80)) {
-            bp_score = 1;
-        } else if (newEntry.systolic_value < 131 && newEntry.diastolic_value < 81) {
-            bp_score = 2;
-        } else {
-            bp_score = 0;
-        } // end bp score
-    
-        let physical_activity_score = 0;
-        if (newEntry.physical_activity_value >= 150) {
-            physical_activity_score = 2;
-        } else {
-            physical_activity_score = 0;
-        } // end activity score if
-    
+            nicotine_score = 0;
+        } // end nicotine score if
+
         let age_score = 0;
-        if ((newEntry.age_value < 45 && newEntry.gender === "M") || (newEntry.age_value < 55 && newEntry.gender === "F")) {
-            age_score = 2;
+        if ((newEntry.age_value < 46 && newEntry.gender === "M") || (newEntry.age_value < 56 && newEntry.gender === "F")) {
+            age_score = 5;
         } else {
             age_score = 0;
         } // end age score if
-    
+
+        let family_history_score = 0;
+        if (newEntry.family_history_value === "false") {
+            family_history_score = 5;
+        } else {
+            family_history_score = 0;
+        } // end family history score if
+
+        let acsm_score = 0;
+        if (newEntry.acsm_value === "No") {
+            acsm_score = 10;
+        } else {
+            acsm_score = 0;
+        } // end acsm score if
+
+        let physical_activity_score = 0;
+        if (newEntry.physical_activity_value >= 150) {
+            physical_activity_score = 16;
+        } else if (newEntry.physical_activity_value >= 120 && newEntry.physical_activity_value < 150) {
+            physical_activity_score = 12;
+        } else if (newEntry.physical_activity_value >= 90 && newEntry.physical_activity_value < 120) {
+            physical_activity_score = 8;
+        } else if (newEntry.physical_activity_value >=60 && newEntry.physical_activity_value < 90) {
+            physical_activity_score = 4;
+        } else {
+            physical_activity_score = 0;
+        } // end activity score if
+
+        let inactivity_score = 0;
+        if (newEntry.inactivity_value < 60) {
+            inactivity_score = 12;
+        } else if (newEntry.inactivity_value >= 60 && newEntry.inactivity_value < 90) {
+            inactivity_score = 6;
+        } else if (newEntry.inactivity_value >= 90 && newEntry.inactivity_value < 120) {
+            inactivity_score = 3;
+        } else {
+            inactivity_score = 0;
+        } // end inactivity score if
+
+        let bp_score = 0;
+        if (newEntry.systolic_value <= 120 && newEntry.diastolic_value <= 80) {
+            bp_score = 12;
+        } else if (newEntry.systolic_value > 120 && newEntry.systolic_value < 130) {
+            bp_score = 8;
+        } else if ((newEntry.systolic_value >= 130 && newEntry.systolic_value < 140) || (newEntry.diastolic_value > 80 && newEntry.diastolic_value < 90)) {
+            bp_score = 4;
+        } else if ((newEntry.systolic_value >= 179) || (newEntry.diastolic_value >= 119)) {
+            swal("Hypertensive Crisis", "Please seek medical help immediately", "warning")
+            bp_score = 0;
+        } else {
+            bp_score = 0;
+        } // end bp score if
+
         let waist_score = 0;
         if ((newEntry.waist_value < 40 && newEntry.gender === "M") || (newEntry.waist_value < 35 && newEntry.gender === "F")) {
-            waist_score = 2;
+            waist_score = 10;
+        } else if ((newEntry.waist_value >= 40 && newEntry.waist_value < 45 && newEntry.gender === "M") || (newEntry.waist_value >= 35 && newEntry.waist_value < 40 && newEntry.gender === "F")) {
+            waist_score = 6;
+        } else if ((newEntry.waist_value >= 45 && newEntry.waist_value < 50 && newEntry.gender === "M") || (newEntry.waist_value >= 40 && newEntry.waist_value < 45 && newEntry.gender === "F")) {
+            waist_score = 3;
         } else {
             waist_score = 0;
         } // end waist score if
-    
-        let hdl_score = 0;
-        if (newEntry.hdl_value > 59) {
-            hdl_score = 2;
-        } else if ((newEntry.hdl_value < 60 && newEntry.hdl_value > 40 && newEntry.gender === "M") || (newEntry.hdl_value < 60 && newEntry.hdl_value > 50 && newEntry.gender === "F")) {
-            hdl_score = 1;
+
+        let sleep_score = 0;
+        if (newEntry.sleep_value >= 7) {
+            sleep_score = 10;
+        } else if (newEntry.sleep_value >= 5 && newEntry.sleep_value < 7) {
+            sleep_score = 4;
         } else {
-            hdl_score = 0;
-        } // end hdl score if
-    
-        let ldl_score = 0;
-        if (newEntry.ldl_value < 100) {
-            ldl_score = 2; 
-        } else if (newEntry.ldl_value > 99 && newEntry.ldl_value < 130) {
-            ldl_score = 1;
+            sleep_score = 0;
+        } // end sleep score if
+
+        let stress_score = 0;
+        if (newEntry.total_stress_value === "false") {
+            stress_score = 10;
+        } else if (newEntry.total_stress_value === "true" && newEntry.stress_management_value === "5") {
+            stress_score = 6;
+        } else if (newEntry.total_stress_value === "true" && newEntry.stress_management_value === "3") {
+            stress_score = 3;
         } else {
-            ldl_score = 0;
-        } // end ldl score if
-    
-        let cvd_score = 0;
-        cvd_score += age_score;
-        cvd_score += waist_score;
-        cvd_score += bp_score;
-        cvd_score += hdl_score;
-        cvd_score += ldl_score;
-        cvd_score += glu_score;
-        cvd_score += physical_activity_score;
-        cvd_score += sleep_score;
-        cvd_score += nicotine_score;
-        cvd_score += family_history_score;
-    
+            stress_score = 0;
+        } // end stress score if
+
         let now_data_date = new Date();
-    
-        entryObject = {
-            entry_id: newEntry.entry_id,
+
+        let well_score = 0;
+        well_score += age_score;
+        well_score += waist_score;
+        well_score += bp_score;
+        well_score += stress_score;
+        well_score += inactivity_score;
+        well_score += acsm_score;
+        well_score += physical_activity_score;
+        well_score += sleep_score;
+        well_score += nicotine_score;
+        well_score += family_history_score;
+
+        scoredObject = {
             id: newEntry.id,
-            data_date: newEntry.data_date,
-            age_value: newEntry.age_value,
-            family_history_value: newEntry.family_history_value,
+            entry_id: newEntry.entry_id,
+            data_date: now_data_date,
             physical_activity_value: newEntry.physical_activity_value,
-            systolic_value: newEntry.systolic_value,
-            diastolic_value: newEntry.diastolic_value,
-            nicotine_value: newEntry.nicotine_value,
-            glu_value: newEntry.glu_value,
-            hdl_value: newEntry.hdl_value,
-            ldl_value: newEntry.ldl_value,
-            trg_value: newEntry.trg_value,
-            waist_value: newEntry.waist_value,
-            sleep_value: newEntry.sleep_value,
-            height_value: newEntry.height_value,
-            weight_value: newEntry.weight_value,
-            gender: newEntry.gender,
-            age_score: age_score,
             physical_activity_score: physical_activity_score,
-            family_history_score: family_history_score,
+            age_value: newEntry.age_value,
+            age_score: age_score,
             bp_score: bp_score,
+            diastolic_value: newEntry.diastolic_value,
+            family_history_value: newEntry.family_history_value,
+            family_history_score: family_history_score,
+            gender: newEntry.gender,
+            height_value: newEntry.height_value,
+            inactivity_value: newEntry.inactivity_value,
+            inactivity_score: inactivity_score,
+            nicotine_value: newEntry.nicotine_value,
             nicotine_score: nicotine_score,
-            glu_score: glu_score,
-            hdl_score: hdl_score,
-            ldl_score: ldl_score,
-            waist_score: waist_score,
+            sleep_value: newEntry.sleep_value,
             sleep_score: sleep_score,
-            cvd_score: cvd_score
-        } // end entryObject
-    
-       
-        self.putData(entryObject);
+            stress_management_value: newEntry.stress_management_value,
+            stress_score: stress_score,
+            systolic_value: newEntry.systolic_value,
+            total_stress_value: newEntry.total_stress_value,
+            waist_value: newEntry.waist_value,
+            waist_score: waist_score,
+            weight_value: newEntry.weight_value,
+            acsm_value: newEntry.acsm_value,
+            acsm_score: acsm_score,
+            well_score: well_score
+        } // end scoredObject
 
-
-
-    } // end scoreData
+        self.putData(scoredObject);
+    } // end packEntry
 
   
 
