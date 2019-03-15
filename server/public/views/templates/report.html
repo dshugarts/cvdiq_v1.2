@@ -69,7 +69,7 @@
             <tr class={{vm.stressClass}}>
                     <td><strong>Total Stress:</strong></td>
                     <td>{{vm.stressDisplay}}</td>
-                    <td>{{data.stress_score}}/12</td>
+                    <td>{{data.stress_score}}/10</td>
                     <td>{{vm.stressRisk}}</td>
                     <td><button ng-click="vm.goLdlReport()" class="btn btn-success">More Info</button></td>
                     <td><button ng-click="vm.getLdlData(vm.id)" class="btn btn-primary">Chart</button></td>
@@ -117,7 +117,7 @@
             <tr class={{vm.nicotineClass}}>
                     <td><strong>Nicotine Use:</strong></td>
                     <td>{{vm.nicotineDisplay}}</td>
-                    <td>{{data.nicotine_score}}/12</td>
+                    <td>{{data.nicotine_score}}/10</td>
                     <td>{{vm.nicotineRisk}}</td>
                     <td><button ng-click="vm.goNicotineReport()" class="btn btn-success">More Info</button></td>
                     <td></td>

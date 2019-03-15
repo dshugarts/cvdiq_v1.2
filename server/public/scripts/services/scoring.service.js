@@ -245,12 +245,12 @@ myApp.service('ScoringService', ['$http', '$location', function($http, $location
                  self.bpClass = 'bg-danger';
              }
    
-             if (data[0].stress_score === 12) {
+             if (data[0].stress_score === 10) {
                self.stressReport = self.allReportDataArray[5].category_description;
                self.stressRisk = 'Low Risk Value';
                self.stressDisplay = 'Low Stress';
                self.stressClass = 'bg-success';
-           } else if (data[0].stress_score < 12 && data[0].stress_score > 0) {
+           } else if (data[0].stress_score < 10 && data[0].stress_score > 0) {
                self.stressReport = self.allReportDataArray[6].category_description;
                self.stressRisk = 'Moderate Risk Value';
                self.stressDisplay = 'Moderate Stress';
@@ -322,7 +322,7 @@ myApp.service('ScoringService', ['$http', '$location', function($http, $location
                self.activityClass = 'bg-danger';
            }
    
-           if (data[0].nicotine_score === 12) {
+           if (data[0].nicotine_score === 10) {
                self.nicotineReport = self.allReportDataArray[20].category_description;
                self.nicotineRisk = 'Low Risk Value';
                self.nicotineDisplay = 'No';
