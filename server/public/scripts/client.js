@@ -73,15 +73,6 @@ myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
         }
       }
     })
-    .when('/disclaimer', {
-      templateUrl: '/views/templates/disclaimer.html',
-      controller: 'DisclaimerController as vm',
-      resolve: {
-        getuser : function(UserService){
-          return UserService.getParticipant();
-        }
-      }
-    })
     .when('/terms', {
       templateUrl: '/views/templates/terms.html',
       controller: 'SignupController as vm',
