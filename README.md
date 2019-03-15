@@ -41,7 +41,7 @@
 	- [x] Remove Button from enter data page so you can only update from the new report page button
 
 ## Delta
-- [ ] Revised metrics
+- [x] Revised metrics
 	- [x] map out new matrix for confirmation
 	- [x] finish scoring algorithm
 	- [x] update dbms to reflect a new table and post correctly
@@ -49,10 +49,10 @@
 	- [x] implement update existing data for new metrics
 	- [x] update report and suggestions to reflect new data
 	- [x] code new matrix and push for testing
-	- [ ] Update scoreChart to new metrics
+	- [x] Update scoreChart to new metrics
 - [x] Remove DOB from general_info page and DBMS
 
-## Echo
+## Echo - Part 1
 - [ ] PDF Print Page of Detailed Report
 	- [ ] Progress Bar for Points Earned in PDF Report
 	- [x] Source filestack
@@ -68,13 +68,16 @@
 - [ ] Fix route timing
 - [ ] Register user page should look different than login (instructions, dual password, etc)
 - [ ] Update all copy from Daniel
- - [ ] Update DBMS Report Data
+	- [ ] Update DBMS Report Data
+	- [ ] Update Risk ranges in report/scoring (what numbers are high, moderate and low)
+	- [ ] Update in Score Chart as well to reflect new risk ranges
+- [ ] Make stress management radio button only appear if total stress is 3-5
+
+## Echo - Part 2
 - [ ] Remove console logs
 - [ ] Alpha Testing
 - [ ] Final Deploy
 - [ ] Beta Testing
-
-
 
 ## Foxtrot
 - [ ] Refactor controllers and services with new names
