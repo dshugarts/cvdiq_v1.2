@@ -59,6 +59,10 @@
 - [ ] Add copy to homepage
 - [x] Update Disclaimer
 - [x] Report Charts need to go to correct charts for new metrics
+- [x] Make stress management radio button only appear if total stress is 3-5
+- [x] Restructure data entry page
+- [ ] Restructure modify entry page
+	- [ ] add toggle to stress questions
 - [ ] Update and create links to improvement pages
 - [ ] Fix loss of data on page refresh (call dataArray in controller??)
 - [ ] Fix route timing
@@ -79,7 +83,6 @@
 - [ ] Refactor stress dispaly in stress_report to include management of stress
 - [ ] Register user page should look different than login (instructions, dual password, etc)
 - [ ] Refactor controllers and services with new names
-- [ ] Make stress management radio button only appear if total stress is 3-5
 - [ ] Change Radio button displays on modify_entry page
 	- [ ] Change DBMS from boolean to string
 - [ ] Change About page to mission, goals, etc.. (and hide it)

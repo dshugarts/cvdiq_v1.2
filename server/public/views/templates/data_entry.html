@@ -1,7 +1,7 @@
 <div ng-include="'views/partials/nav.html'"></div>
 <div class="container">
   <h2>Enter New Data</h2>
-  <form class="col-md-12" id="dataForm">
+  <form class="col-md-12">
     <div class="form-group col-md-6">
         <label for="height">Height (in.):</label>
         <input type="text" name="height" class="form-control" ng-model="vm.newEntry.height_value" placeholder="Height (in.)"/>
@@ -10,6 +10,8 @@
         <label for="weight">Weight (lbs.):</label>
         <input type="text" name="weight" class="form-control" ng-model="vm.newEntry.weight_value" placeholder="Weight (lbs.)"/>
         </div>
+    </form>
+    <form class="col-md-12">
       <div class="form-group col-md-6">
       <label for="age">Age:</label>
       <input type="text" name="age" class="form-control" ng-model="vm.newEntry.age_value" placeholder="Age"/>
@@ -18,6 +20,8 @@
       <label for="waist">Waist Size (in.):</label>
       <input type="text" name="waist" class="form-control" ng-model="vm.newEntry.waist_value" placeholder="Waist Size (in.)"/>
       </div>
+    </form>
+    <form class="col-md-12">
       <div class="form-group col-md-6">
         <label for="systolic">Systolic Pressure:</label>
         <input type="text" name="systolic" class="form-control" ng-model="vm.newEntry.systolic_value" placeholder="Systolic Pressure"/>
@@ -26,6 +30,8 @@
         <label for="diastolic">Diastolic Pressure:</label>
         <input type="text" name="diastolic" class="form-control" ng-model="vm.newEntry.diastolic_value" placeholder="Diastolic Pressure"/>
         </div>
+    </form>
+    <form class="col-md-12">
       <div class="form-group col-md-6">
         <label for="acitvity">Moderate Physical Activity (min./week):</label>
         <input type="text" name="activity" class="form-control" ng-model="vm.newEntry.physical_activity_value" placeholder="Moderate Physical Activity (min/week)"/>
@@ -34,6 +40,8 @@
         <label for="inactivity">Physical Inactivity (consecutive min.):</label>
         <input type="text" name="inactivity" class="form-control" ng-model="vm.newEntry.inactivity_value" placeholder="Physical Inactivity (consecutive min.)"/>
         </div>
+    </form>
+    <form class="col-md-12">
     <div class="form-group col-md-6">
         <label for="sleep">Sleep (hrs/night):</label>
         <input type="text" name="sleep" class="form-control" ng-model="vm.newEntry.sleep_value" placeholder="Hours of Sleep (hrs/night)"/>
@@ -47,6 +55,8 @@
         <label><input type="radio" name="acsm" ng-model="vm.newEntry.acsm_value" value="Yes">Yes to at least 1 question</label>
         </div>
         </div>
+    </form>
+    <form class="col-md-12">
     <div class="form-group col-md-6">
         <label>Total Stress:</label>
         <div class="radio" for="total_stress">
@@ -68,6 +78,8 @@
         <label><input type="radio" name="stress_management" ng-model="vm.newEntry.stress_management_value" value="0">0-2</label>
         </div>
         </div>
+    </form>
+    <form class="col-md-12">
     <div class="form-group col-md-3">
         <label>Nicotine Use?:</label>
         <div class="radio" for="nicotine">
