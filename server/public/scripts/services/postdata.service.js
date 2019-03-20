@@ -173,7 +173,7 @@ myApp.service('PostDataService', ['$http', '$location', function($http, $locatio
         //  console.log('response', response.data);
           self.heartHealthValuesArray = response.data;
           for (item of self.heartHealthValuesArray) {
-          self.heartHealthScore.push(item.cvd_score);
+          self.heartHealthScore.push(item.well_score);
           self.dates.push(item.data_date);
           }
         }).then(function(response) {

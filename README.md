@@ -59,6 +59,7 @@
 - [ ] Add copy to homepage
 - [x] Update Disclaimer
 - [ ] Report Charts need to go to correct charts for new metrics
+- [ ] My Suggestions are not loading
 - [ ] Refactor stress dispaly in report to include management of stress
 - [ ] Make stress management radio button only appear if total stress is 3-5
 - [ ] Fix loss of data on page refresh (call dataArray in controller??)
