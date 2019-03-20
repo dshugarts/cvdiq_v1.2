@@ -136,8 +136,8 @@ myApp.service('DataService', ['$http', '$location', function($http, $location){
         $location.url('/age_report')
     }
 
-    self.goLdlReport = function() {
-        $location.url('/ldl_report')
+    self.goStressReport = function() {
+        $location.url('/stress_report')
     }
 
     self.goWaistReport = function() {

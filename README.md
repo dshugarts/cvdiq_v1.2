@@ -58,9 +58,8 @@
 	- [x] Source filestack
 - [ ] Add copy to homepage
 - [x] Update Disclaimer
-- [ ] Report Charts need to go to correct charts for new metrics
+- [x] Report Charts need to go to correct charts for new metrics
 - [ ] My Suggestions are not loading
-- [ ] Refactor stress dispaly in report to include management of stress
 - [ ] Make stress management radio button only appear if total stress is 3-5
 - [ ] Fix loss of data on page refresh (call dataArray in controller??)
 - [ ] Fix route timing
@@ -68,7 +67,7 @@
 	- [ ] Update DBMS Report Data
 	- [ ] Update Risk ranges in report/scoring (what numbers are high, moderate and low)
 	- [ ] Update in Score Chart as well to reflect new risk ranges
-- [ ] Waist moderate values added to scoring service
+- [x] Waist and Sleep moderate values added to scoring service
 
 ## Echo - Part 2
 - [ ] Remove console logs
@@ -77,6 +76,7 @@
 - [ ] Beta Testing
 
 ## Foxtrot
+- [ ] Refactor stress dispaly in stress_report to include management of stress
 - [ ] Register user page should look different than login (instructions, dual password, etc)
 - [ ] Refactor controllers and services with new names
 - [ ] resources into report table

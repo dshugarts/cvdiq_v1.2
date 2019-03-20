@@ -8,8 +8,8 @@ myApp.service('PostDataService', ['$http', '$location', function($http, $locatio
     self.activityScore = [];
     self.inactivityValuesArray = [];
     self.inactivityScore = [];
-    self.ldlValuesArray = [];
-    self.ldlScore = [];
+    self.stressValuesArray = [];
+    self.stressScore = [];
     self.trgValuesArray = [];
     self.trgScore = [];
     self.heartHealthValuesArray = [];
@@ -123,16 +123,16 @@ myApp.service('PostDataService', ['$http', '$location', function($http, $locatio
         })
       } //end getHDLData
 
-      self.getLdlData = function(id){
-        self.ldlScore = [];
+      self.getStressData = function(id){
+        self.stressScore = [];
         self.dates = [];
         $http({
           method: 'GET',
-          url: `/data/ldl/${id}`
+          url: `/data/stress/${id}`
         }).then(function(response){
          // console.log('response', response.data);
-          self.ldlValuesArray = response.data;
-          for (item of self.ldlValuesArray) {
+          self.stressValuesArray = response.data;
+          for (item of self.stressValuesArray) {
           self.ldlScore.push(item.ldl_value);
           self.dates.push(item.data_date);
           }

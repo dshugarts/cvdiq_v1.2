@@ -343,8 +343,8 @@ myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
         }
       }
     })
-    .when('/ldl_report', {
-      templateUrl: '/views/reports/ldl_report.html',
+    .when('/stress_report', {
+      templateUrl: '/views/reports/stress_report.html',
       controller: 'ReportController as vm',
       resolve: {
         getuser : function(UserService){
