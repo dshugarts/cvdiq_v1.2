@@ -80,9 +80,78 @@ myApp.controller('ReportController', ['$http', '$location', 'UserService', 'Data
     self.newNicotine = ScoringService.dataArray.list[0].nicotine_value.toString();
     self.newStress = ScoringService.dataArray.list[0].total_stress_value.toString();
     self.newHistory = ScoringService.dataArray.list[0].family_history_value.toString();
+    bpShow = ScoringService.bpShow;
+    stressShow = ScoringService.stressShow;
+    inactivityShow = ScoringService.inactivityShow;
+    waistShow = ScoringService.waistShow;
+    activityShow = ScoringService.activityShow;
+    nicotineShow = ScoringService.nicotineShow;
+    sleepShow = ScoringService.sleepShow;
 
     console.log(self.dataArray);
 
+    self.bpAppear = function(bpShow) {
+      console.log(bpShow);
+      if (bpShow === 1) {
+        self.bpButton = true;
+      } else {
+        self.bpButton = false;
+      }
+    } // end bpAppear
+
+    self.stressAppear = function(stressShow) {
+      console.log(stressShow);
+      if (stressShow === 1) {
+        self.stressButton = true;
+      } else {
+        self.stressButton = false;
+      }
+    } // end stressAppear
+
+    self.inactivityAppear = function(inactivityShow) {
+      console.log(inactivityShow);
+      if (inactivityShow === 1) {
+        self.inactivityButton = true;
+      } else {
+        self.inactivityButton = false;
+      }
+    } // end inactivityAppear
+
+    self.waistAppear = function(waistShow) {
+      console.log(waistShow);
+      if (waistShow === 1) {
+        self.waistButton = true;
+      } else {
+        self.waistButton = false;
+      }
+    } // end waistAppear
+
+    self.activityAppear = function(activityShow) {
+      console.log(activityShow);
+      if (activityShow === 1) {
+        self.activityButton = true;
+      } else {
+        self.activityButton = false;
+      }
+    } // end activityAppear
+
+    self.nicotineAppear = function(nicotineShow) {
+      console.log(nicotineShow);
+      if (nicotineShow === 1) {
+        self.nicotineButton = true;
+      } else {
+        self.nicotineButton = false;
+      }
+    } // end nicotineAppear
+
+    self.sleepAppear = function(sleepShow) {
+      console.log(sleepShow);
+      if (sleepShow === 1) {
+        self.sleepButton = true;
+      } else {
+        self.sleepButton = false;
+      }
+    } // end sleepAppear
 
     self.dashView = function() {
       $location.url('/dashboard');
@@ -144,5 +213,12 @@ self.saveData = function(data, nic, his){
     UpdateService.packEntry(updateObject);
   } // end saveData
 
+    self.bpAppear(bpShow);
+    self.stressAppear(stressShow);
+    self.inactivityAppear(inactivityShow);
+    self.waistAppear(waistShow);
+    self.activityAppear(activityShow);
+    self.nicotineAppear(nicotineShow);
+    self.sleepAppear(sleepShow);
 
   }]); // end Report Controller

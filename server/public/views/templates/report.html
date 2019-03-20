@@ -66,7 +66,7 @@
                     <td>{{vm.bpRisk}}</td>
                     <td><button ng-click="vm.goBpReport()" class="btn btn-success">More Info</button></td>
                     <td><button ng-click="vm.getBpData(vm.id)" class="btn btn-primary">Chart</button></td>
-                    <td><button ng-click="vm.improveBp()" class="btn btn-info">Improvement Tips</button></td>
+                    <td><button ng-click="vm.improveBp()" class="btn btn-info" ng-show="vm.bpButton">Improvement Tips</button></td>
             </tr>
             <tr class={{vm.stressClass}}>
                     <td><strong>Total Stress:</strong></td>
@@ -75,7 +75,7 @@
                     <td>{{vm.stressRisk}}</td>
                     <td><button ng-click="vm.goStressReport()" class="btn btn-success">More Info</button></td>
                     <td></td>
-                    <td><button ng-click="vm.improveStress()" class="btn btn-info">Improvement Tips</button></td>
+                    <td><button ng-click="vm.improveStress()" class="btn btn-info" ng-show="vm.stressButton">Improvement Tips</button></td>
             </tr>
             <tr class={{vm.inactivityClass}}>
                     <td><strong>Physical Inactivity:</strong></td>
@@ -84,7 +84,7 @@
                     <td>{{vm.inactivityRisk}}</td>
                     <td><button ng-click="vm.goInactivityReport()" class="btn btn-success">More Info</button></td>
                     <td><button ng-click="vm.getInactivityData(vm.id)" class="btn btn-primary">Chart</button></td>
-                    <td><button ng-click="vm.improveInactivity()" class="btn btn-info">Improvement Tips</button></td>
+                    <td><button ng-click="vm.improveInactivity()" class="btn btn-info" ng-show="vm.inactivityButton">Improvement Tips</button></td>
             </tr>
             <tr class={{vm.acsmClass}}>
                 <td><strong>ACSM Risk Questions:</strong></td>
@@ -102,7 +102,7 @@
                     <td>{{vm.waistRisk}}</td>
                     <td><button ng-click="vm.goWaistReport()" class="btn btn-success">More Info</button></td>
                     <td><button ng-click="vm.getWaistData(vm.id)" class="btn btn-primary">Chart</button></td>
-                    <td><button ng-click="vm.improveWaist()" class="btn btn-info">Improvement Tips</button></td>
+                    <td><button ng-click="vm.improveWaist()" class="btn btn-info" ng-show="vm.waistButton">Improvement Tips</button></td>
             </tr>
             <tr class={{vm.historyClass}}>
                     <td><strong>Family History:</strong></td>
@@ -120,7 +120,7 @@
                     <td>{{vm.activityRisk}}</td>
                     <td><button ng-click="vm.goActivityReport()" class="btn btn-success">More Info</button></td>
                     <td><button ng-click="vm.getActivityData(vm.id)" class="btn btn-primary">Chart</button></td>
-                    <td><button ng-click="vm.improveActivity()" class="btn btn-info">Improvement Tips</button></td>
+                    <td><button ng-click="vm.improveActivity()" class="btn btn-info" ng-show="vm.activityButton">Improvement Tips</button></td>
             </tr>
             <tr class={{vm.nicotineClass}}>
                     <td><strong>Nicotine Use:</strong></td>
@@ -129,7 +129,7 @@
                     <td>{{vm.nicotineRisk}}</td>
                     <td><button ng-click="vm.goNicotineReport()" class="btn btn-success">More Info</button></td>
                     <td></td>
-                    <td><button ng-click="vm.improveNicotine()" class="btn btn-info">Improvement Tips</button></td>
+                    <td><button ng-click="vm.improveNicotine()" class="btn btn-info" ng-show="vm.nicotineButton">Improvement Tips</button></td>
             </tr>
             <tr class={{vm.sleepClass}}>
                     <td><strong>Sleep (hrs/night):</strong></td>
@@ -138,7 +138,7 @@
                     <td>{{vm.sleepRisk}}</td>
                     <td><button ng-click="vm.goSleepReport()" class="btn btn-success">More Info</button></td>
                     <td><button ng-click="vm.getSleepData(vm.id)" class="btn btn-primary">Chart</button></td>
-                    <td><button ng-click="vm.improveSleep()" class="btn btn-info">Improvement Tips</button></td>
+                    <td><button ng-click="vm.improveSleep()" class="btn btn-info" ng-show="vm.sleepButton">Improvement Tips</button></td>
             </tr>
             <tr class="bg-success">
                     <td><strong>Weight:</strong></td>
