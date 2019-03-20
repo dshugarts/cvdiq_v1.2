@@ -8,13 +8,15 @@
                   <tr>
                     <th>Metric</th>
                     <th>Value</th>
+                    <th>Points Earned</th>
                     <th>Risk Level</th>
                   </tr>
                 </thead>
-                <tbody ng-repeat="data in vm.dataArray">
+                <tbody ng-repeat="data in vm.dataArray.list">
                     <tr class={{vm.ageClass}}>
                         <td><strong>Age:</strong></td>
                         <td>{{data.age_value}}</td>
+                        <td>{{data.age_score}}/5</td>
                         <td>{{vm.ageRisk}}</td>
                 </tr>
             </tbody>

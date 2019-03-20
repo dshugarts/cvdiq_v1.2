@@ -8,14 +8,16 @@
               <tr>
                 <th>Metric</th>
                 <th>Value</th>
+                <th>Points Earned</th>
                 <th>Risk Level</th>
                 <th>Chart</th>
               </tr>
             </thead>
-            <tbody ng-repeat="data in vm.dataArray">
+            <tbody ng-repeat="data in vm.dataArray.list">
                 <tr class={{vm.bpClass}}>
                    <td><strong>Blood Pressure:</strong></td>
                     <td>{{data.systolic_value}}/{{data.diastolic_value}}</td>
+                    <td>{{data.bp_score}}/12</td>
                     <td>{{vm.bpRisk}}</td>
                     <td><button ng-click="vm.getBpData(vm.id)" class="btn btn-primary">Chart</button></td>
             </tr>
