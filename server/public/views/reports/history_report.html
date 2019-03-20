@@ -8,13 +8,15 @@
                   <tr>
                     <th>Metric</th>
                     <th>Value</th>
+                    <th>Points Earned</th>
                     <th>Risk Level</th>
                   </tr>
                 </thead>
-                <tbody ng-repeat="data in vm.dataArray">
+                <tbody ng-repeat="data in vm.dataArray.list">
                     <tr class={{vm.historyClass}}>
                         <td><strong>Family History of CVDs:</strong></td>
                         <td>{{vm.historyDisplay}}</td>
+                        <td>{{data.family_history_score}}/5</td>
                         <td>{{vm.historyRisk}}</td>
                 </tr>
             </tbody>

@@ -8,13 +8,15 @@
                   <tr>
                     <th>Metric</th>
                     <th>Value</th>
+                    <th>Points Earned</th>
                     <th>Risk Level</th>
                   </tr>
                 </thead>
-                <tbody ng-repeat="data in vm.dataArray">
+                <tbody ng-repeat="data in vm.dataArray.list">
                     <tr class={{vm.nicotineClass}}>
                         <td><strong>Nicotine Use:</strong></td>
                         <td>{{vm.nicotineDisplay}}</td>
+                        <td>{{data.nicotine_score}}/10</td>
                         <td>{{vm.nicotineRisk}}</td>
                 </tr>
             </tbody>
