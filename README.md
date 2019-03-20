@@ -60,7 +60,6 @@
 - [x] Update Disclaimer
 - [x] Report Charts need to go to correct charts for new metrics
 - [ ] My Suggestions are not loading
-- [ ] Make stress management radio button only appear if total stress is 3-5
 - [ ] Fix loss of data on page refresh (call dataArray in controller??)
 - [ ] Fix route timing
 - [ ] Update all copy from Daniel
@@ -79,6 +78,7 @@
 - [ ] Refactor stress dispaly in stress_report to include management of stress
 - [ ] Register user page should look different than login (instructions, dual password, etc)
 - [ ] Refactor controllers and services with new names
+- [ ] Make stress management radio button only appear if total stress is 3-5
 - [ ] resources into report table
 - [ ] Change Radio button displays on modify_entry page
 	- [ ] Change DBMS from boolean to string
