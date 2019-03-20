@@ -100,8 +100,8 @@ myApp.service('DataService', ['$http', '$location', function($http, $location){
         $location.url('/sleep_resource')
     }
 
-    self.goGluReport = function() {
-        $location.url('/glu_report')
+    self.goAcsmReport = function() {
+        $location.url('/acsm_report')
     }
 
     self.goHhsReport = function() {

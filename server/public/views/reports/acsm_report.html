@@ -1,6 +1,6 @@
 <div class="ng-cloak" ng-include="'views/partials/nav.html'"></div>
 <div class="container">
-        <h2>My Waist Size Report</h2>
+        <h2>My ACSM Risk Questionnaire</h2>
     </br>
     </br>
         <table class="table">
@@ -10,27 +10,20 @@
                     <th>Value</th>
                     <th>Points Earned</th>
                     <th>Risk Level</th>
-                    <th>Chart</th>
                   </tr>
                 </thead>
                 <tbody ng-repeat="data in vm.dataArray.list">
-                    <tr class={{vm.waistClass}}>
-                        <td><strong>Waist Size (in.):</strong></td>
-                        <td>{{data.waist_value}}</td>
-                        <td>{{data.waist_score}}/10</td>
-                        <td>{{vm.waistRisk}}</td>
-                        <td><button ng-click="vm.getWaistData(vm.id)" class="btn btn-primary">Chart</button></td>
+                    <tr class={{vm.acsmClass}}>
+                        <td><strong>ACSM Risk Questions:</strong></td>
+                        <td>{{data.acsm_value}}</td>
+                        <td>{{data.acsm_score}}/10</td>
+                        <td>{{vm.acsmRisk}}</td>
                 </tr>
             </tbody>
         </table>
     </div>
     <div class="container">
-        {{vm.waistReport}}
-    </div>
-    </br>
-    </br>
-    <div class="container">
-            
+        {{vm.gluReport}}
     </div>
     </br>
     </br>

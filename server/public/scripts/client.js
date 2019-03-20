@@ -370,8 +370,8 @@ myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
         }
       }
     })
-    .when('/glu_report', {
-      templateUrl: '/views/reports/glu_report.html',
+    .when('/acsm_report', {
+      templateUrl: '/views/reports/acsm_report.html',
       controller: 'ReportController as vm',
       resolve: {
         getuser : function(UserService){

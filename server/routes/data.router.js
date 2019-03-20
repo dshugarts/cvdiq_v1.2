@@ -151,7 +151,7 @@ router.get('/hearthealth/:id', (request, response) => {
 router.get('/waist/:id', (request, response) => {
   if (request.isAuthenticated()) {
   const id = request.params.id;
-  const sqlText = `SELECT entry_id, id, data_date, waist_value FROM data WHERE id=$1 ORDER BY entry_id`;
+  const sqlText = `SELECT entry_id, id, data_date, waist_value FROM new_data WHERE id=$1 ORDER BY entry_id`;
   pool.query(sqlText, [id])
     .then(function(result) {
     //  console.log('Get result:', result);
