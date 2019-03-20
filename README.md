@@ -62,7 +62,6 @@
 - [x] Make stress management radio button only appear if total stress is 3-5
 - [x] Restructure data entry page
 - [x] Restructure modify entry page
-	- [ ] add toggle to stress questions
 - [ ] Update and create links to improvement pages
 - [ ] Fix loss of data on page refresh (call dataArray in controller??)
 - [ ] Fix route timing
@@ -81,6 +80,7 @@
 
 ## Foxtrot
 - [ ] Refactor stress dispaly in stress_report to include management of stress
+- [ ] add toggle to stress questions on modify entry
 - [ ] Register user page should look different than login (instructions, dual password, etc)
 - [ ] Refactor controllers and services with new names
 - [ ] Change Radio button displays on modify_entry page
