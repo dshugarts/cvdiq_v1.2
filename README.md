@@ -73,7 +73,7 @@
 - [x] Waist and Sleep moderate values added to scoring service
 
 ## Echo - Part 2
-- [ ] Remove console logs
+- [ ] Remove/comment console logs
 - [ ] Alpha Testing
 - [ ] Final Deploy
 - [ ] Beta Testing
