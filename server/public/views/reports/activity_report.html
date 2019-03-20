@@ -8,14 +8,16 @@
                   <tr>
                     <th>Metric</th>
                     <th>Value</th>
+                    <th>Points Earned</th>
                     <th>Risk Level</th>
                     <th>Chart</th>
                   </tr>
                 </thead>
-                <tbody ng-repeat="data in vm.dataArray">
+                <tbody ng-repeat="data in vm.dataArray.list">
                     <tr class={{vm.activityClass}}>
                         <td><strong>Physical Activity (min/week):</strong></td>
                         <td>{{data.physical_activity_value}}</td>
+                        <td>{{data.physical_activity_score}}/16</td>
                         <td>{{vm.activityRisk}}</td>
                         <td><button ng-click="vm.getActivityData(vm.id)" class="btn btn-primary">Chart</button></td>
                 </tr>

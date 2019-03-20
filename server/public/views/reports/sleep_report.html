@@ -8,14 +8,16 @@
                   <tr>
                     <th>Metric</th>
                     <th>Value</th>
+                    <th>Points Earned</th>
                     <th>Risk Level</th>
                     <th>Chart</th>
                   </tr>
                 </thead>
-                <tbody ng-repeat="data in vm.dataArray">
+                <tbody ng-repeat="data in vm.dataArray.list">
                     <tr class={{vm.sleepClass}}>
                         <td><strong>Sleep (hrs/night):</strong></td>
                         <td>{{data.sleep_value}}</td>
+                        <td>{{data.sleep_score}}/10</td>
                         <td>{{vm.sleepRisk}}</td>
                         <td><button ng-click="vm.getSleepData(vm.id)" class="btn btn-primary">Chart</button></td>
                 </tr>

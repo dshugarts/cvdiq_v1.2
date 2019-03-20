@@ -43,7 +43,7 @@ router.get('/glu/:id', (request, response) => {
 router.get('/bmi/:id', (request, response) => {
   if (request.isAuthenticated()) {
   const id = request.params.id;
-  const sqlText = `SELECT entry_id, id, data_date, weight_value, height_value FROM data WHERE id=$1 ORDER BY entry_id`;
+  const sqlText = `SELECT entry_id, id, data_date, weight_value, height_value FROM new_data WHERE id=$1 ORDER BY entry_id`;
   pool.query(sqlText, [id])
     .then(function(result) {
      // console.log('Get result:', result);
@@ -61,7 +61,7 @@ router.get('/bmi/:id', (request, response) => {
 router.get('/activity/:id', (request, response) => {
   if (request.isAuthenticated()) {
   const id = request.params.id;
-  const sqlText = `SELECT entry_id, id, data_date, physical_activity_value FROM data WHERE id=$1 ORDER BY entry_id`;
+  const sqlText = `SELECT entry_id, id, data_date, physical_activity_value FROM new_data WHERE id=$1 ORDER BY entry_id`;
   pool.query(sqlText, [id])
     .then(function(result) {
      // console.log('Get result:', result);
@@ -169,7 +169,7 @@ router.get('/waist/:id', (request, response) => {
 router.get('/sleep/:id', (request, response) => {
   if (request.isAuthenticated()) {
   const id = request.params.id;
-  const sqlText = `SELECT entry_id, id, data_date, sleep_value FROM data WHERE id=$1 ORDER BY entry_id`;
+  const sqlText = `SELECT entry_id, id, data_date, sleep_value FROM new_data WHERE id=$1 ORDER BY entry_id`;
   pool.query(sqlText, [id])
     .then(function(result) {
     //  console.log('Get result:', result);
@@ -187,7 +187,7 @@ router.get('/sleep/:id', (request, response) => {
 router.get('/weight/:id', (request, response) => {
   if (request.isAuthenticated()) {
   const id = request.params.id;
-  const sqlText = `SELECT entry_id, id, data_date, weight_value FROM data WHERE id=$1 ORDER BY entry_id`;
+  const sqlText = `SELECT entry_id, id, data_date, weight_value FROM new_data WHERE id=$1 ORDER BY entry_id`;
   pool.query(sqlText, [id])
     .then(function(result) {
      // console.log('Get result:', result);
