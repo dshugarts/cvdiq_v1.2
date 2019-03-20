@@ -8,6 +8,26 @@ myApp.controller('ParticipantController', ['$http', '$location', 'UserService', 
       self.entryObject = ScoringService.entryObject;
       self.id = UserService.userObject.id;
       self.packEntry = ScoringService.packEntry;
+      stressQuestion = self.newEntry.total_stress_value;
+
+      self.stressBlock = function(stressQuestion) {
+        console.log(stressQuestion);
+        if (stressQuestion === true) {
+          self.stressManagement = false;
+        } else {
+          self.stressManagement = true;
+        }
+      } // end stressBlock
+
+      self.stressCube = function(stressQuestion) {
+        console.log(stressQuestion);
+        if (stressQuestion === false) {
+          self.stressManagement = true;
+        } else {
+          self.stressManagement = false;
+        }
+      } // end stressBlock
+
 
 
     }]);

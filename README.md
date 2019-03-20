@@ -59,9 +59,10 @@
 - [ ] Add copy to homepage
 - [x] Update Disclaimer
 - [x] Report Charts need to go to correct charts for new metrics
-- [ ] My Suggestions are not loading
+- [ ] Update and create links to improvement pages
 - [ ] Fix loss of data on page refresh (call dataArray in controller??)
 - [ ] Fix route timing
+- [x] resources into report table
 - [ ] Update all copy from Daniel
 	- [ ] Update DBMS Report Data
 	- [ ] Update Risk ranges in report/scoring (what numbers are high, moderate and low)
@@ -79,7 +80,6 @@
 - [ ] Register user page should look different than login (instructions, dual password, etc)
 - [ ] Refactor controllers and services with new names
 - [ ] Make stress management radio button only appear if total stress is 3-5
-- [ ] resources into report table
 - [ ] Change Radio button displays on modify_entry page
 	- [ ] Change DBMS from boolean to string
 - [ ] Change About page to mission, goals, etc.. (and hide it)
