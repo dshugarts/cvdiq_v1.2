@@ -21,7 +21,6 @@ myApp.controller('ReportController', ['$http', '$location', 'UserService', 'Data
     self.id = UserService.userObject.id;
     self.getAllReportData = ScoringService.getAllReportData;
     self.reportPage = PostDataService.reportPage;
-    self.resourcePage = PostDataService.resourcePage;
     self.ageReport = ScoringService.ageReport;
     self.bpReport = ScoringService.bpReport;
     self.stressReport = ScoringService.stressReport;
@@ -77,6 +76,7 @@ myApp.controller('ReportController', ['$http', '$location', 'UserService', 'Data
     self.sleepClass = ScoringService.sleepClass;
     self.bmiClass = ScoringService.bmiClass;
     self.wellClass = ScoringService.wellClass;
+    self.bpImprovement = ScoringService.bpImprovement;
     self.newNicotine = ScoringService.dataArray.list[0].nicotine_value.toString();
     self.newStress = ScoringService.dataArray.list[0].total_stress_value.toString();
     self.newHistory = ScoringService.dataArray.list[0].family_history_value.toString();
@@ -110,6 +110,10 @@ myApp.controller('ReportController', ['$http', '$location', 'UserService', 'Data
    
   self.viewResources = function(){
     $location.url('/resources');
+}
+
+self.improveBp = function(){
+  $location.url('/bp_resource');
 }
 
 
