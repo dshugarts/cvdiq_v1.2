@@ -1,7 +1,7 @@
 <div ng-include="'views/partials/nav.html'"></div>
 <div class="container">
   <h2>Update Last Data Entry</h2>
-<form class="col-md-12" id="dataForm" ng-repeat="data in vm.dataArray">
+<form class="col-md-12" id="dataForm" ng-repeat="data in vm.dataArray.list">
   <div class="form-group col-md-6">
     <label for="height">Height (in.):</label>
     <div ng-hide="data.editing" name="height" class="">

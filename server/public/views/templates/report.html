@@ -13,7 +13,7 @@
                 <th>Chart</th>
               </tr>
             </thead>
-            <tbody ng-repeat="data in vm.dataArray">
+            <tbody ng-repeat="data in vm.dataArray.list">
             <tr class={{vm.wellClass}}>
                 <td>Wellness Score:</td>
                 <td>{{data.well_score}}</td>
@@ -49,7 +49,7 @@
                         <th>Chart</th>
                       </tr>
                     </thead>
-                    <tbody ng-repeat="data in vm.dataArray">
+                    <tbody ng-repeat="data in vm.dataArray.list">
             <tr class={{vm.ageClass}}>
                 <td><strong>Age:</strong></td>
                 <td>{{data.age_value}}</td>

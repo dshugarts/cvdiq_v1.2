@@ -1,15 +1,15 @@
 myApp.controller('UserController', ['$location', 'UserService', 'DataService', 'ScoringService', function($location, UserService, DataService, ScoringService) {
-//  console.log('UserController created');
+  console.log('UserController created');
   var self = this;
   self.userService = UserService;
   self.DataService = DataService;
   self.ScoringService = ScoringService;
   self.userObject = UserService.userObject;
-  self.dataArray = ScoringService.dataArray;
-  self.id = UserService.userObject.id;
-  self.myScore = ScoringService.myScore;
-
-  self.newData = function(){
+//  self.dataArray = ScoringService.dataArray;
+  id = UserService.userObject.id;
+//  self.myScore = ScoringService.myScore;
+  
+self.newData = function(){
     $location.url('/data_entry');
 }
 

@@ -77,9 +77,9 @@ myApp.controller('ReportController', ['$http', '$location', 'UserService', 'Data
     self.sleepClass = ScoringService.sleepClass;
     self.bmiClass = ScoringService.bmiClass;
     self.wellClass = ScoringService.wellClass;
-    self.newNicotine = self.dataArray[0].nicotine_value.toString();
-    self.newStress = self.dataArray[0].total_stress_value.toString();
-    self.newHistory = self.dataArray[0].family_history_value.toString();
+    self.newNicotine = ScoringService.dataArray.list[0].nicotine_value.toString();
+    self.newStress = ScoringService.dataArray.list[0].total_stress_value.toString();
+    self.newHistory = ScoringService.dataArray.list[0].family_history_value.toString();
 
     console.log(self.dataArray);
 

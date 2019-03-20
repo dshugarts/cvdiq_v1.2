@@ -1,10 +1,11 @@
-myApp.service('ScoringService', ['$http', '$location', function($http, $location){
+myApp.service('ScoringService', ['$http', '$location', 'UserService', function($http, $location, UserService){
        console.log('ScoringService Loaded');
        var self = this;
        self.newEntry = {};
        self.entryObject = {list: []};
-       self.dataArray = [];
-       self.myScore = '';
+       self.dataArray = {
+        list: []
+    }
 
        self.toDashboard = function() {
         swal("Data successfully entered!", "", "success")
@@ -46,17 +47,17 @@ myApp.service('ScoringService', ['$http', '$location', function($http, $location
           url: `/scoring/${id}`
         }).then(function(response){
         console.log('response', response.data);
-        self.dataArray = response.data;
-        console.log('DATA ARRAY', self.dataArray.length);
+        self.dataArray.list = response.data;
+        console.log('DATA ARRAY', self.dataArray);
         if (self.dataArray.length === 0) {
             self.myScore = 0;
             console.log('TEST 1 ', self.myScore);
         } else {
-            self.myScore = self.dataArray[0].well_score;
+            self.myScore = self.dataArray.list[0].well_score;
             console.log('TEST 2 ',  self.myScore);
           }
           console.log('DS myScore ', self.myScore);
-            self.getAllReportData(self.dataArray);
+            self.getAllReportData(self.dataArray.list);
         //  self.getAllResourceData(self.dataArray);
         }).catch(function(error){
          console.log('Error getting data', error);
@@ -290,7 +291,11 @@ myApp.service('ScoringService', ['$http', '$location', function($http, $location
                self.waistReport = self.allReportDataArray[14].category_description;
                self.waistRisk = 'Low Risk Value';
                self.waistClass = 'bg-success';
-           } else if (data[0].waist_score === 0) {
+           } else if (data[0].waist_score < 10 && data[0].waist_score > 0) {
+            self.waistReport = self.allReportDataArray[15].category_description;
+            self.waistRisk = 'Moderate Risk Value';
+            self.waistClass = 'bg-warning';
+        } else if (data[0].waist_score === 0) {
                self.waistReport = self.allReportDataArray[15].category_description;
                self.waistRisk = 'High Risk Value';
                self.waistClass = 'bg-danger';
@@ -338,7 +343,11 @@ myApp.service('ScoringService', ['$http', '$location', function($http, $location
                self.sleepReport = self.allReportDataArray[22].category_description;
                self.sleepRisk = 'Low Risk Value';
                self.sleepClass = 'bg-success';
-           } else if (data[0].sleep_score === 0) {
+           } else if (data[0].sleep_score === 4) {
+            self.sleepReport = self.allReportDataArray[23].category_description;
+            self.sleepRisk = 'Moderate Risk Value';
+            self.sleepClass = 'bg-warning';
+            } else if (data[0].sleep_score === 0) {
                self.sleepReport = self.allReportDataArray[23].category_description;
                self.sleepRisk = 'High Risk Value';
                self.sleepClass = 'bg-danger';
@@ -383,4 +392,6 @@ myApp.service('ScoringService', ['$http', '$location', function($http, $location
            
          } //end getAllReportData
 
+
+        // self.getData(id);
     }]); // end ScoringService
