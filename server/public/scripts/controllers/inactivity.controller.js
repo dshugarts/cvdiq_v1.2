@@ -1,13 +1,13 @@
-myApp.controller('HDLController', ['$http', '$location', 'UserService', 'PostDataService', function($http, $location, UserService, PostDataService) {
+myApp.controller('InactivityController', ['$http', '$location', 'UserService', 'PostDataService', function($http, $location, UserService, PostDataService) {
     // console.log('HDLController created');
     var self = this;
     self.userService = UserService;
     self.postdataService = PostDataService;
     self.userObject = UserService.userObject;
     self.id = UserService.userObject.id;
-    self.hdlValuesArray = PostDataService.hdlValuesArray;
+    self.inactivityValuesArray = PostDataService.inactivityValuesArray;
     self.reportPage = PostDataService.reportPage;
-    self.hdlScore = PostDataService.hdlScore;
+    self.inactivityScore = PostDataService.inactivityScore;
     self.dates = PostDataService.dates;
 
 
@@ -18,8 +18,8 @@ myApp.controller('HDLController', ['$http', '$location', 'UserService', 'PostDat
         data: {
           labels: self.dates,
           datasets: [{ 
-              data: self.hdlScore,
-              label: "HDL",
+              data: self.inactivityScore,
+              label: "Physical Inactivity",
               borderColor: "crimson",
               fill: false
             }]
@@ -27,7 +27,7 @@ myApp.controller('HDLController', ['$http', '$location', 'UserService', 'PostDat
         options: {
           title: {
             display: true,
-            text: 'My HDL Readings Over Time',
+            text: 'My Physical Inactivity Readings Over Time',
             position: 'bottom'
           },
           legend: {

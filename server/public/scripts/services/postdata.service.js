@@ -6,8 +6,8 @@ myApp.service('PostDataService', ['$http', '$location', function($http, $locatio
     self.gluScore = [];
     self.activityValuesArray = [];
     self.activityScore = [];
-    self.hdlValuesArray = [];
-    self.hdlScore = [];
+    self.inactivityValuesArray = [];
+    self.inactivityScore = [];
     self.ldlValuesArray = [];
     self.ldlScore = [];
     self.trgValuesArray = [];
@@ -103,21 +103,21 @@ myApp.service('PostDataService', ['$http', '$location', function($http, $locatio
             })
           } //end getbmiData
 
-      self.getHdlData = function(id){
-        self.hdlScore = [];
+      self.getInactivityData = function(id){
+        self.inactivityScore = [];
         self.dates = [];
         $http({
           method: 'GET',
-          url: `/data/hdl/${id}`
+          url: `/data/inactivity/${id}`
         }).then(function(response){
         //  console.log('response', response.data);
-          self.hdlValuesArray = response.data;
-          for (item of self.hdlValuesArray) {
-          self.hdlScore.push(item.hdl_value);
+          self.inactivityValuesArray = response.data;
+          for (item of self.inactivityValuesArray) {
+          self.inactivityScore.push(item.inactivity_value);
           self.dates.push(item.data_date);
           }
         }).then(function(response) {
-          $location.url('/hdl');
+          $location.url('/inactivity');
         }).catch(function(error){
         //  console.log('Error getting data', error);
         })

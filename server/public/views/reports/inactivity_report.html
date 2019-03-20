@@ -8,16 +8,18 @@
                   <tr>
                     <th>Metric</th>
                     <th>Value</th>
+                    <th>Points Earned</th>
                     <th>Risk Level</th>
                     <th>Chart</th>
                   </tr>
                 </thead>
-                <tbody ng-repeat="data in vm.dataArray">
-                    <tr class={{vm.hdlClass}}>
-                        <td><strong>HDL:</strong></td>
-                        <td>{{data.hdl_value}}</td>
-                        <td>{{vm.hdlRisk}}</td>
-                        <td><button ng-click="vm.getHdlData(vm.id)" class="btn btn-primary">Chart</button></td>
+                <tbody ng-repeat="data in vm.dataArray.list">
+                    <tr class={{vm.inactivityClass}}>
+                        <td><strong>Physical Inactivity:</strong></td>
+                        <td>{{data.inactivity_value}}</td>
+                        <td>{{data.inactivity_score}}/12</td>
+                        <td>{{vm.inactivityRisk}}</td>
+                        <td><button ng-click="vm.getInactivityData(vm.id)" class="btn btn-primary">Chart</button></td>
                 </tr>
             </tbody>
         </table>

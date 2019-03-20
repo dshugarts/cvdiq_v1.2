@@ -5,7 +5,7 @@ myApp.controller('ReportController', ['$http', '$location', 'UserService', 'Data
     self.DataService = DataService;
     self.PostDataService = PostDataService;
     self.getGluData = PostDataService.getGluData;
-    self.getHdlData = PostDataService.getHdlData;
+    self.getInactivityData = PostDataService.getInactivityData;
     self.getLdlData = PostDataService.getLdlData;
     self.getTrgData = PostDataService.getTrgData;
     self.getHeartHealthData = PostDataService.getHeartHealthData;
@@ -54,7 +54,7 @@ myApp.controller('ReportController', ['$http', '$location', 'UserService', 'Data
     self.goAgeReport = DataService.goAgeReport;
     self.goLdlReport = DataService.goLdlReport;
     self.goHhsReport = DataService.goHhsReport;
-    self.goHdlReport = DataService.goHdlReport;
+    self.goInactivityReport = DataService.goInactivityReport;
     self.goWaistReport = DataService.goWaistReport;
     self.goHistoryReport = DataService.goHistoryReport;
     self.goActivityReport = DataService.goActivityReport;

@@ -127,9 +127,9 @@ myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
         }
       }
     })
-    .when('/hdl', {
-      templateUrl: '/views/charts/hdl.html',
-      controller: 'HDLController as vm',
+    .when('/inactivity', {
+      templateUrl: '/views/charts/inactivity.html',
+      controller: 'InactivityController as vm',
       resolve: {
         getuser : function(UserService){
           return UserService.getParticipant();
@@ -352,8 +352,8 @@ myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
         }
       }
     })
-    .when('/hdl_report', {
-      templateUrl: '/views/reports/hdl_report.html',
+    .when('/inactivity_report', {
+      templateUrl: '/views/reports/inactivity_report.html',
       controller: 'ReportController as vm',
       resolve: {
         getuser : function(UserService){
