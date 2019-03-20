@@ -61,7 +61,7 @@
 - [x] Report Charts need to go to correct charts for new metrics
 - [x] Make stress management radio button only appear if total stress is 3-5
 - [x] Restructure data entry page
-- [ ] Restructure modify entry page
+- [x] Restructure modify entry page
 	- [ ] add toggle to stress questions
 - [ ] Update and create links to improvement pages
 - [ ] Fix loss of data on page refresh (call dataArray in controller??)

@@ -1,7 +1,7 @@
 <div ng-include="'views/partials/nav.html'"></div>
 <div class="container">
   <h2>Update Last Data Entry</h2>
-<form class="col-md-12" id="dataForm" ng-repeat="data in vm.dataArray.list">
+<form class="col-md-12" ng-repeat="data in vm.dataArray.list">
   <div class="form-group col-md-6">
     <label for="height">Height (in.):</label>
     <div ng-hide="data.editing" name="height" class="">
@@ -16,6 +16,8 @@
         </div>
           <input ng-show="data.editing" type="text" name="weight" class="form-control" ng-model="data.weight_value" placeholder="Weight (lbs.)"/>
         </div>
+    </form>
+    <form class="col-md-12" ng-repeat="data in vm.dataArray.list">
     <div class="form-group col-md-6">
         <label for="age">Age:</label>
         <div ng-hide="data.editing" name="age" class="">
@@ -30,6 +32,8 @@
         </div>
           <input ng-show="data.editing" type="text" name="waist" class="form-control" ng-model="data.waist_value" placeholder="Waist Size (in.)"/>
         </div>
+    </form>
+    <form class="col-md-12" ng-repeat="data in vm.dataArray.list">
     <div class="form-group col-md-6">
         <label for="systolic">Systolic Pressure:</label>
         <div ng-hide="data.editing" name="systolic" class="">
@@ -44,6 +48,8 @@
         </div>
           <input ng-show="data.editing" type="text" name="diastolic" class="form-control" ng-model="data.diastolic_value" placeholder="Diastolic Pressure"/>
         </div>
+    </form>
+    <form class="col-md-12" ng-repeat="data in vm.dataArray.list">
     <div class="form-group col-md-6">
         <label for="activity">Moderate Physical Activity (min/week):</label>
         <div ng-hide="data.editing" name="activity" class="">
@@ -58,6 +64,8 @@
         </div>
             <input ng-show="data.editing" type="text" name="inactivity" class="form-control" ng-model="data.inactivity_value" placeholder="Physical Inactivity (consecutive min.)"/>
         </div>
+    </form>
+    <form class="col-md-12" ng-repeat="data in vm.dataArray.list">
     <div class="form-group col-md-6">
         <label for="sleep">Sleep (hrs/night):</label>
         <div ng-hide="data.editing" name="sleep" class="">
@@ -79,6 +87,8 @@
             </div>
             </div>
             </div>
+        </form>
+        <form class="col-md-12" ng-repeat="data in vm.dataArray.list">
     <div class="form-group col-md-6">
         <label>Total Stress:</label>
             <div ng-hide="data.editing" name="total_stress" class="">
@@ -110,6 +120,8 @@
             </div>
             </div>
             </div>
+        </form>
+        <form class="col-md-12" ng-repeat="data in vm.dataArray.list">
     <div class="form-group col-md-3">
         <label>Nicotine Use?:</label>
         <div ng-hide="data.editing" name="nicotine" class="">
@@ -150,7 +162,8 @@
         <input type="radio" name="history" ng-model="vm.newHistory" value="true">Yes</label>
         </div>
         </div>
-
+    </form>
+    <form class="col-md-12" ng-repeat="data in vm.dataArray.list">
   <div class="form-group col-md-8">
     <button ng-hide="data.editing" ng-click="vm.editData(data)" class="btn btn-primary">Update Data</button>
     <button ng-show="data.editing" ng-click="vm.saveData(data, vm.newNicotine, vm.newHistory, vm.newStress)" class="btn btn-success">Save Data</button>
