@@ -197,6 +197,18 @@ myApp.controller('ReportController', ['$http', '$location', 'UserService', 'Data
       $location.url('/waist_resource');
     }
 
+    self.improveActivity = function(){
+      $location.url('/activity_resource');
+    }
+
+    self.improveNicotine = function(){
+      $location.url('/nicotine_resource');
+    }
+
+    self.improveSleep = function(){
+      $location.url('/sleep_resource');
+    }
+
 
 self.saveData = function(data, nic, his){
   //  console.log('PUT DATA', data, nic, his);
