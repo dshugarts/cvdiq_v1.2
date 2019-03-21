@@ -262,8 +262,8 @@ myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
         }
       }
     })
-    .when('/glu_resource', {
-      templateUrl: '/views/resources/glu_resource.html',
+    .when('/stress_resource', {
+      templateUrl: '/views/resources/stress_resource.html',
       controller: 'ReportController as vm',
       resolve: {
         getuser : function(UserService){

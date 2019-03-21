@@ -177,13 +177,17 @@ myApp.controller('ReportController', ['$http', '$location', 'UserService', 'Data
       $location.url('/modify_entry');
   }
    
-  self.viewResources = function(){
-    $location.url('/resources');
-}
+    self.viewResources = function(){
+      $location.url('/resources');
+    }
 
-self.improveBp = function(){
-  $location.url('/bp_resource');
-}
+    self.improveBp = function(){
+      $location.url('/bp_resource');
+    }
+
+    self.improveStress = function(){
+      $location.url('/stress_resource');
+    }
 
 
 self.saveData = function(data, nic, his){

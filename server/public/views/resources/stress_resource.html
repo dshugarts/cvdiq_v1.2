@@ -1,6 +1,6 @@
 <div class="ng-cloak" ng-include="'views/partials/nav.html'"></div>
 <div class="container">
-        <h2>Improving Fasting Glucose</h2>
+        <h2>Improving Stress</h2>
     </div>
     </br>
     </br>
@@ -11,14 +11,16 @@
                       <tr>
                         <th>Metric</th>
                         <th>Value</th>
+                        <th>Points Earned</th>
                         <th>Risk Level</th>
                       </tr>
                     </thead>
-                    <tbody ng-repeat="data in vm.dataArray">
-                        <tr class={{vm.gluClass}}>
-                        <td><strong>Fasting Glucose:</strong></td>
-                        <td>{{data.glu_value}}</td>
-                        <td>{{vm.gluRisk}}</td>
+                    <tbody ng-repeat="data in vm.dataArray.list">
+                        <tr class={{vm.stressClass}}>
+                        <td><strong>Total Stress:</strong></td>
+                        <td>{{vm.stressDisplay}}</td>
+                        <td>{{data.stress_score}}/10</td>
+                        <td>{{vm.stressRisk}}</td>
                         </tr>
         </tbody>
         </table>
