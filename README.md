@@ -56,23 +56,23 @@
 - [ ] PDF Print Page of Detailed Report
 	- [ ] Progress Bar for Points Earned in PDF Report
 	- [x] Source filestack
-- [ ] Add copy to homepage
 - [x] Update Disclaimer
 - [x] Report Charts need to go to correct charts for new metrics
 - [x] Make stress management radio button only appear if total stress is 3-5
 - [x] Restructure data entry page
 - [x] Restructure modify entry page
-- [x] Update and create links to improvement pages
-- [ ] Fix loss of data on page refresh (call dataArray in controller??)
-- [ ] Fix route timing
+- [x] Update and create links to improvement page
 - [x] resources into report table
 - [ ] Update all copy from Daniel
 	- [ ] Update DBMS Report Data
 	- [ ] Update Risk ranges in report/scoring (what numbers are high, moderate and low)
 	- [ ] Update in Score Chart as well to reflect new risk ranges
+	- [ ] Add copy to homepage
 - [x] Waist and Sleep moderate values added to scoring service
 
 ## Echo - Part 2
+- [ ] Fix loss of data on page refresh (call dataArray in controller??)
+- [ ] Fix route timing
 - [ ] Remove/comment console logs
 - [ ] Alpha Testing
 - [ ] Final Deploy
