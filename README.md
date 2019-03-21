@@ -62,7 +62,7 @@
 - [x] Make stress management radio button only appear if total stress is 3-5
 - [x] Restructure data entry page
 - [x] Restructure modify entry page
-- [ ] Update and create links to improvement pages
+- [x] Update and create links to improvement pages
 - [ ] Fix loss of data on page refresh (call dataArray in controller??)
 - [ ] Fix route timing
 - [x] resources into report table
