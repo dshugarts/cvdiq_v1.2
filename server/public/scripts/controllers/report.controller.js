@@ -189,6 +189,10 @@ myApp.controller('ReportController', ['$http', '$location', 'UserService', 'Data
       $location.url('/stress_resource');
     }
 
+    self.improveInactivity = function(){
+      $location.url('/inactivity_resource');
+    }
+
 
 self.saveData = function(data, nic, his){
   //  console.log('PUT DATA', data, nic, his);

@@ -1,6 +1,6 @@
 <div class="ng-cloak" ng-include="'views/partials/nav.html'"></div>
 <div class="container">
-        <h2>Improving HDL Cholesterol</h2>
+        <h2>Improving Physical Inactivity</h2>
     </div>
     </br>
     </br>
@@ -11,14 +11,16 @@
                       <tr>
                         <th>Metric</th>
                         <th>Value</th>
+                        <th>Points Earned</th>
                         <th>Risk Level</th>
                       </tr>
                     </thead>
-                    <tbody ng-repeat="data in vm.dataArray">
-                        <tr class={{vm.hdlClass}}>
-                        <td><strong>HDL:</strong></td>
-                        <td>{{data.hdl_value}}</td>
-                        <td>{{vm.hdlRisk}}</td>
+                    <tbody ng-repeat="data in vm.dataArray.list">
+                        <tr class={{vm.inactivityClass}}>
+                        <td><strong>Physical Inactivity:</strong></td>
+                        <td>{{data.inactivity_value}}</td>
+                        <td>{{data.inactivity_score}}/12</td>
+                        <td>{{vm.inactivityRisk}}</td>
                         </tr>
         </tbody>
         </table>
@@ -47,5 +49,5 @@
 </br>
 </br>
 <div class="container">
-        <button class="btn btn-primary" ng-click="vm.resourcePage()">Return to Resources</button>
+        <button class="btn btn-primary" ng-click="vm.reportPage()">Return to Report</button>
     </div>

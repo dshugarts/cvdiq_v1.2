@@ -244,8 +244,8 @@ myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
         }
       }
     })
-    .when('/hdl_resource', {
-      templateUrl: '/views/resources/hdl_resource.html',
+    .when('/inactivity_resource', {
+      templateUrl: '/views/resources/inactivity_resource.html',
       controller: 'ReportController as vm',
       resolve: {
         getuser : function(UserService){
