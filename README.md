@@ -68,6 +68,7 @@
 	- [ ] Update Risk ranges in report/scoring (what numbers are high, moderate and low)
 	- [ ] Update in Score Chart as well to reflect new risk ranges
 	- [ ] Add copy to homepage
+	- [ ] Update Text on data_entry and modify_entry
 - [x] Waist and Sleep moderate values added to scoring service
 
 ## Echo - Part 2
