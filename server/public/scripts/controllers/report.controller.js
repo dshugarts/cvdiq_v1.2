@@ -193,6 +193,10 @@ myApp.controller('ReportController', ['$http', '$location', 'UserService', 'Data
       $location.url('/inactivity_resource');
     }
 
+    self.improveWaist = function(){
+      $location.url('/waist_resource');
+    }
+
 
 self.saveData = function(data, nic, his){
   //  console.log('PUT DATA', data, nic, his);

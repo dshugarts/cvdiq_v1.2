@@ -11,13 +11,15 @@
                       <tr>
                         <th>Metric</th>
                         <th>Value</th>
+                        <th>Points Earned</th>
                         <th>Risk Level</th>
                       </tr>
                     </thead>
-                    <tbody ng-repeat="data in vm.dataArray">
+                    <tbody ng-repeat="data in vm.dataArray.list">
                         <tr class={{vm.waistClass}}>
                         <td><strong>Waist Size (in.):</strong></td>
                         <td>{{data.waist_value}}</td>
+                        <td>{{data.waist_score}}/10</td>
                         <td>{{vm.waistRisk}}</td>
                         </tr>
         </tbody>
@@ -58,5 +60,7 @@
 </br>
 </br>
 <div class="container">
-        <button class="btn btn-primary" ng-click="vm.resourcePage()">Return to Resources</button>
+        <button class="btn btn-primary" ng-click="vm.reportPage()">Return to Report</button>
     </div>
+</br>
+</br>
