@@ -290,10 +290,12 @@ myApp.service('ScoringService', ['$http', '$location', 'UserService', function($
                self.acsmReport = self.allReportDataArray[11].category_description;
                self.acsmRisk = 'Low Risk Value';
                self.acsmClass = 'bg-success';
+               self.acsmShow = 0;
            } else if (data[0].acsm_score === 0) {
                self.acsmReport = self.allReportDataArray[13].category_description;
                self.acsmRisk = 'High Risk Value';
                self.acsmClass = 'bg-danger';
+               self.acsmShow = 1;
            }
    
            if (data[0].waist_score === 10) {

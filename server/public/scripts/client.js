@@ -253,8 +253,8 @@ myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
         }
       }
     })
-    .when('/ldl_resource', {
-      templateUrl: '/views/resources/ldl_resource.html',
+    .when('/acsm_resource', {
+      templateUrl: '/views/resources/acsm_resource.html',
       controller: 'ReportController as vm',
       resolve: {
         getuser : function(UserService){

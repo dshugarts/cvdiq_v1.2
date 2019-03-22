@@ -87,6 +87,7 @@ myApp.controller('ReportController', ['$http', '$location', 'UserService', 'Data
     activityShow = ScoringService.activityShow;
     nicotineShow = ScoringService.nicotineShow;
     sleepShow = ScoringService.sleepShow;
+    acsmShow = ScoringService.acsmShow;
 
     console.log(self.dataArray);
 
@@ -96,6 +97,15 @@ myApp.controller('ReportController', ['$http', '$location', 'UserService', 'Data
         self.bpButton = true;
       } else {
         self.bpButton = false;
+      }
+    } // end bpAppear
+
+    self.acsmAppear = function(acsmShow) {
+      console.log(acsmShow);
+      if (acsmShow === 1) {
+        self.acsmButton = true;
+      } else {
+        self.acsmButton = false;
       }
     } // end bpAppear
 
@@ -209,6 +219,10 @@ myApp.controller('ReportController', ['$http', '$location', 'UserService', 'Data
       $location.url('/sleep_resource');
     }
 
+    self.improveAcsm = function(){
+      $location.url('/acsm_resource');
+    }
+
 
 self.saveData = function(data, nic, his){
   //  console.log('PUT DATA', data, nic, his);
@@ -244,5 +258,6 @@ self.saveData = function(data, nic, his){
     self.activityAppear(activityShow);
     self.nicotineAppear(nicotineShow);
     self.sleepAppear(sleepShow);
+    self.acsmAppear(acsmShow);
 
   }]); // end Report Controller
