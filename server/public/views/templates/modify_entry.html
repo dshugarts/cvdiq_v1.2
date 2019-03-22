@@ -58,7 +58,11 @@
             <input ng-show="data.editing" type="text" name="activity" class="form-control" ng-model="data.physical_activity_value" placeholder="Moderate Physical Activity (min/week)"/>
         </div>    
     <div class="form-group col-md-6">
-        <label for="inactivity">Physical Inactivity (consecutive min.):</label>
+        <label for="inactivity">Physical Inactivity (min):</label>
+    </br>
+        <i>On a typical day, and on average, how many consecutive minutes you spend sitting without getting up?</i>
+</br>
+</br>
         <div ng-hide="data.editing" name="inactivity" class="">
                 {{data.inactivity_value}}
         </div>
@@ -90,7 +94,11 @@
         </form>
         <form class="col-md-12" ng-repeat="data in vm.dataArray.list">
     <div class="form-group col-md-6">
-        <label>Total Stress:</label>
+        <label>What would you rate your current level of stress in the past 14 days?</label>
+    </br>
+        <i>(0= no stress at all, 1 = low, 2 = moderate, 3 = moderate-high, 4 = high, 5 = extremely stressful)</i>
+    </br>
+</br>
             <div ng-hide="data.editing" name="total_stress" class="">
                 {{vm.newStress}}
             </div>
@@ -104,7 +112,11 @@
             </div>
             </div>
     <div class="form-group col-md-6">
-        <label>Stress Management:</label>
+        <label>Bases on your answer about stress, how would you rate your current ability to manage it in the past 14 days?</label>
+    </br>
+        <i>(0 = I have no control of it, 1 = I constantly feel I “take 2 steps forward and take 3 steps back”, 2 = I don’t know how to manage it, 3 = I have difficulties managing it, 4 = I have a good handle on it, 5 = I have no issues managing it)</i>
+        </br>
+    </br>
             <div ng-hide="data.editing" name="stress_management" class="">
                 {{data.stress_management_value}}
             </div>

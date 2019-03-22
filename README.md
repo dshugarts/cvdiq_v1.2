@@ -64,11 +64,11 @@
 - [x] Update and create links to improvement page
 - [x] resources into report table
 - [ ] Update all copy from Daniel
-	- [ ] Update DBMS Report Data
 	- [ ] Update Risk ranges in report/scoring (what numbers are high, moderate and low)
 	- [ ] Update in Score Chart as well to reflect new risk ranges
-	- [ ] Add copy to homepage
-	- [ ] Update Text on data_entry and modify_entry
+	- [x] Update Reports
+	- [x] Update Resources
+	- [x] Update Text on data_entry and modify_entry
 - [x] Waist and Sleep moderate values added to scoring service
 
 ## Echo - Part 2
