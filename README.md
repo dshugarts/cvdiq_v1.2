@@ -63,9 +63,9 @@
 - [x] Restructure modify entry page
 - [x] Update and create links to improvement page
 - [x] resources into report table
-- [ ] Update all copy from Daniel
-	- [ ] Update Risk ranges in report/scoring (what numbers are high, moderate and low)
-	- [ ] Update in Score Chart as well to reflect new risk ranges
+- [x] Update all copy from Daniel
+	- [x] Update Risk ranges in report/scoring (what numbers are high, moderate and low)
+	- [x] Update in Score Chart as well to reflect new risk ranges
 	- [x] Update Reports
 	- [x] Update Resources
 	- [x] Update Text on data_entry and modify_entry

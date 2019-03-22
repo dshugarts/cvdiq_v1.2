@@ -327,12 +327,12 @@ myApp.service('ScoringService', ['$http', '$location', 'UserService', function($
                self.historyClass = 'bg-danger';
            }
    
-           if (data[0].physical_activity_score === 16) {
+           if (data[0].physical_activity_score > 11) {
                self.activityReport = self.allReportDataArray[18].category_description;
                self.activityRisk = 'Low Risk Value';
                self.activityClass = 'bg-success';
                self.activityShow = 0;
-           } else if (data[0].physical_activity_score < 16 && data[0].physical_activity_score > 0) {
+           } else if (data[0].physical_activity_score < 12 && data[0].physical_activity_score > 0) {
             self.activityReport = self.allReportDataArray[19].category_description;
             self.activityRisk = 'Moderate Risk Value';
             self.activityClass = 'bg-warning';
