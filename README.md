@@ -53,8 +53,7 @@
 - [x] Remove DOB from general_info page and DBMS
 
 ## Echo - Part 1
-- [ ] PDF Print Page of Detailed Report
-	- [ ] Progress Bar for Points Earned in PDF Report
+- [x] PDF Print Page of Detailed Report
 	- [x] Source filestack
 - [x] Update Disclaimer
 - [x] Report Charts need to go to correct charts for new metrics
@@ -70,8 +69,10 @@
 	- [x] Update Resources
 	- [x] Update Text on data_entry and modify_entry
 - [x] Waist and Sleep moderate values added to scoring service
+- [ ] Add metrics to print_report that dont have improvement tips and just use general report text
 
 ## Echo - Part 2
+- [ ] Progress Bar for Points Earned in PDF Report
 - [ ] Fix loss of data on page refresh (call dataArray in controller??)
 - [ ] Fix route timing
 - [ ] Remove/comment console logs
