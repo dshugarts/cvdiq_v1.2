@@ -227,6 +227,10 @@ myApp.controller('ReportController', ['$http', '$location', 'UserService', 'Data
       $location.url('/print_report');
     }
 
+    self.print = function(){
+      window.print();
+    }
+
 
 self.saveData = function(data, nic, his){
   //  console.log('PUT DATA', data, nic, his);

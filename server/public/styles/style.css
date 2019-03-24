@@ -21,6 +21,10 @@
   margin-top: 8%;
 }
 
+#print {
+  float: right;
+}
+
 #gauge {
   height: 500px;
   width: 480px;
