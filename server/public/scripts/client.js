@@ -190,6 +190,15 @@ myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
         }
       }
     })
+    .when('/print_report', {
+      templateUrl: '/views/templates/print_report.html',
+      controller: 'ReportController as vm',
+      resolve: {
+        getuser : function(UserService){
+          return UserService.getParticipant();
+        }
+      }
+    })
     .when('/bp_report', {
       templateUrl: '/views/reports/bp_report.html',
       controller: 'ReportController as vm',

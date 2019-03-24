@@ -223,6 +223,10 @@ myApp.controller('ReportController', ['$http', '$location', 'UserService', 'Data
       $location.url('/acsm_resource');
     }
 
+    self.printReport = function(){
+      $location.url('/print_report');
+    }
+
 
 self.saveData = function(data, nic, his){
   //  console.log('PUT DATA', data, nic, his);
