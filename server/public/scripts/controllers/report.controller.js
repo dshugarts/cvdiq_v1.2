@@ -90,6 +90,7 @@ myApp.controller('ReportController', ['$http', '$location', 'UserService', 'Data
     acsmShow = ScoringService.acsmShow;
     ageShow = ScoringService.ageShow;
     historyShow = ScoringService.historyShow;
+    bmiShow = ScoringService.bmiShow;
 
     console.log(self.dataArray);
 
@@ -181,7 +182,16 @@ myApp.controller('ReportController', ['$http', '$location', 'UserService', 'Data
       } else {
         self.historyButton = false;
       }
-    } // end ageAppear
+    } // end historyAppear
+
+    self.bmiAppear = function(bmiShow) {
+      console.log(bmiShow);
+      if (bmiShow === 1) {
+        self.bmiButton = true;
+      } else {
+        self.bmiButton = false;
+      }
+    } // end bmiAppear
 
     self.dashView = function() {
       $location.url('/dashboard');
@@ -289,5 +299,6 @@ self.saveData = function(data, nic, his){
     self.acsmAppear(acsmShow);
     self.ageAppear(ageShow);
     self.historyAppear(historyShow);
+    self.bmiAppear(bmiShow);
 
   }]); // end Report Controller

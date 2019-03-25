@@ -69,7 +69,7 @@
 	- [x] Update Resources
 	- [x] Update Text on data_entry and modify_entry
 - [x] Waist and Sleep moderate values added to scoring service
-- [ ] Add metrics to print_report that dont have improvement tips and just use general report text
+- [x] Add metrics to print_report that dont have improvement tips and just use general report text
 
 ## Echo - Part 2
 - [ ] Progress Bar for Points Earned in PDF Report

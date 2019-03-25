@@ -389,14 +389,17 @@ myApp.service('ScoringService', ['$http', '$location', 'UserService', function($
                self.bmiReport = self.allReportDataArray[27].category_description;
                self.bmiRisk = 'Optimal Value';
                self.bmiClass = 'bg-success';
+               self.bmiShow = 0;
            } else if (bmiScoreUse > 24.99 && bmiScoreUse < 30) {
                self.bmiReport = self.allReportDataArray[28].category_description;
                self.bmiRisk = 'Moderate Value';
                self.bmiClass = 'bg-warning';
+               self.bmiShow = 1;
            } else if (bmiScoreUse > 29.99) {
                self.bmiReport = self.allReportDataArray[29].category_description;
                self.bmiRisk = 'High Value';
                self.bmiClass = 'bg-danger';
+               self.bmiShow = 1;
            }
    
            if (data[0].well_score > 79) {
