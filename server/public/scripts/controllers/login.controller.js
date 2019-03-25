@@ -6,6 +6,8 @@ myApp.controller('LoginController', ['$http', '$location', 'UserService', 'DataS
     self.user = {
       username: '',
       password: '',
+      passwordOne: '',
+      passwordTwo: '',
       user_role: 1
     };
     self.message = '';
@@ -43,11 +45,14 @@ myApp.controller('LoginController', ['$http', '$location', 'UserService', 'DataS
     };
 
     self.registerUser = function () {
-      if (self.user.username === '' || self.user.password === '') {
-        self.message = "Choose a username and password!";
-        self.user.username = "";
-        self.user.password = "";
-      } else {
+      if (self.user.username === '') {
+        self.message = "Please Create a Username";
+      } else if (self.user.passwordOne === '' || self.user.passwordTwo === '') {
+        self.message = "Please Enter a Password";
+      } else if (self.user.passwordOne != self.user.passwordTwo) {
+        self.message = "Passwords Do Not Match";
+      } else if (self.user.passwordOne === self.user.passwordTwo) {
+        self.user.password = self.user.passwordOne;
        // console.log('sending to server...', self.user);
         $http.post('/api/user/register', self.user).then(function (response) {
         //  console.log('success');
@@ -57,7 +62,7 @@ myApp.controller('LoginController', ['$http', '$location', 'UserService', 'DataS
         },
           function (response) {
           //  console.log('error');
-            self.message = "Something went wrong. Please try again."
+            self.message = "Username is Unavailable. Please Try Again"
           });
       }
     } // end registerUser
