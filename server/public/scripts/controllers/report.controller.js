@@ -88,6 +88,8 @@ myApp.controller('ReportController', ['$http', '$location', 'UserService', 'Data
     nicotineShow = ScoringService.nicotineShow;
     sleepShow = ScoringService.sleepShow;
     acsmShow = ScoringService.acsmShow;
+    ageShow = ScoringService.ageShow;
+    historyShow = ScoringService.historyShow;
 
     console.log(self.dataArray);
 
@@ -162,6 +164,24 @@ myApp.controller('ReportController', ['$http', '$location', 'UserService', 'Data
         self.sleepButton = false;
       }
     } // end sleepAppear
+
+    self.ageAppear = function(ageShow) {
+      console.log(ageShow);
+      if (ageShow === 1) {
+        self.ageButton = true;
+      } else {
+        self.ageButton = false;
+      }
+    } // end ageAppear
+
+    self.historyAppear = function(historyShow) {
+      console.log(historyShow);
+      if (historyShow === 1) {
+        self.historyButton = true;
+      } else {
+        self.historyButton = false;
+      }
+    } // end ageAppear
 
     self.dashView = function() {
       $location.url('/dashboard');
@@ -267,5 +287,7 @@ self.saveData = function(data, nic, his){
     self.nicotineAppear(nicotineShow);
     self.sleepAppear(sleepShow);
     self.acsmAppear(acsmShow);
+    self.ageAppear(ageShow);
+    self.historyAppear(historyShow);
 
   }]); // end Report Controller

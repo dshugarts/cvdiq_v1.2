@@ -226,10 +226,12 @@ myApp.service('ScoringService', ['$http', '$location', 'UserService', function($
                  self.ageReport = self.allReportDataArray[0].category_description;
                  self.ageRisk = 'Low Risk Value';
                  self.ageClass = 'bg-success';
+                 self.ageShow = 0;
              } else if (data[0].age_score === 0) {
                  self.ageReport = self.allReportDataArray[1].category_description;
                  self.ageRisk = 'High Risk Value';
                  self.ageClass = 'bg-danger';
+                 self.ageShow = 1;
              }
    
              if (data[0].bp_score === 12) {
@@ -320,11 +322,13 @@ myApp.service('ScoringService', ['$http', '$location', 'UserService', function($
                self.historyRisk = 'Low Risk Value';
                self.historyDisplay = 'No';
                self.historyClass = 'bg-success';
+               self.historyShow = 0;
            } else if (data[0].family_history_score === 0) {
                self.historyReport = self.allReportDataArray[17].category_description;
                self.historyRisk = 'High Risk Value';
                self.historyDisplay = 'Yes';
                self.historyClass = 'bg-danger';
+               self.historyShow = 1;
            }
    
            if (data[0].physical_activity_score > 11) {
