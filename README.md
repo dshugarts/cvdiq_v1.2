@@ -70,6 +70,7 @@
 	- [x] Update Text on data_entry and modify_entry
 - [x] Waist and Sleep moderate values added to scoring service
 - [x] Add metrics to print_report that dont have improvement tips and just use general report text
+- [x] add toggle to stress questions on modify entry
 
 ## Echo - Part 2
 - [ ] Progress Bar for Points Earned in PDF Report
@@ -82,7 +83,6 @@
 
 ## Foxtrot
 - [ ] Refactor stress dispaly in stress_report to include management of stress
-- [ ] add toggle to stress questions on modify entry
 - [ ] Register user page should look different than login (instructions, dual password, etc)
 - [ ] Refactor controllers and services with new names
 - [ ] Change Radio button displays on modify_entry page
