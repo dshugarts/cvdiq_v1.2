@@ -1,4 +1,4 @@
-#welcome {
+.welcome {
   float: right;
   display: block;
   color: white;
@@ -6,6 +6,10 @@
   padding: 14px 16px;
   text-decoration: none;
   margin-right: 10px;
+}
+
+#logout {
+  margin-left: 10px;
 }
 
 #disclaimer {

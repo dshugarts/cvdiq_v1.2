@@ -4,9 +4,9 @@
       <li><a href="#!dashboard">My Dashboard</a></li>
       <li><a href="#!report">My Detailed Report</a></li>
       <li><a href="#!info">About</a></li>
-      <div id="welcome">
+      <div class="welcome">
       <li>Welcome, {{vm.userObject.userName}}</li>
-      <button class="btn btn-default" ng-click="vm.userService.logout()">Log Out</button>
+      <button id="logout" class="btn btn-default" ng-click="vm.userService.logout()">Log Out</button>
       </div>
     </ul>
   </div>
