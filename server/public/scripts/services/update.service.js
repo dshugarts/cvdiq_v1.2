@@ -9,7 +9,7 @@ myApp.service('UpdateService', ['$http', '$location', 'ScoringService', function
 
     self.toDashboard = function() {
         
-        swal("Data successfully entered!", "", "success")
+        swal("Data successfully updated!", "", "success")
         $location.url('/dashboard');
         self.newEntry = {};
     }
